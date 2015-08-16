@@ -1,4 +1,4 @@
-package halin.me.testapp.DataBinding.view;
+package halin.me.testapp.DataBinding.Base.view;
 
 import android.app.Activity;
 
@@ -7,12 +7,12 @@ import halin.me.testapp.base.BasePresenter;
 /**
  * Created by halin on 8/15/15.
  */
-public class DataBindingTestPresenter extends BasePresenter {
+public class DataBindingBasePresenter extends BasePresenter {
 
 
 
 
-    protected DataBindingTestPresenter(Activity context) {
+    protected DataBindingBasePresenter(Activity context) {
         super(context);
     }
 

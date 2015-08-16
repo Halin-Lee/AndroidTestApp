@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <data class = ".ListBinding">
+    <!-- 自定义绑定类名称-->
+    <data class="halin.me.testapp.DataBinding.Custom.Model.DataBindingCustomBinder">
+        <!-- variable无法使用自己类型作为参数,即type为halin.me.testapp.DataBinding.Custom.Model.DataBindingCustomBinder-->
         <variable
-            name="bindListModel"
-            type="java.lang.String"/>
-
+            name="binder"
+            type="String"/>
     </data>
 
     <LinearLayout
@@ -14,12 +16,10 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+
         <TextView
-            android:id="@+id/text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{bindListModel}"/>
-
+            android:text="@{binder.getClass().getName()}" />
     </LinearLayout>
-
 </layout>

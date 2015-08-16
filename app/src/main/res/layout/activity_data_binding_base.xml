@@ -2,12 +2,16 @@
 
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
-    <data class = ".BindTestData">
+
+    <!-- 定义绑定器的类-->
+    <data class=".BaseBinding">
+        <!-- 定义绑定器的参数 @param name 名称 @param type 对应的类-->
         <variable
             name="bindModel"
-            type="halin.me.testapp.DataBinding.view.BindModel"/>
+            type="halin.me.testapp.DataBinding.Base.view.BindModel" />
 
     </data>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,6 +21,6 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{bindModel.stringToShow}"/>
+            android:text="@{bindModel.stringToShow}" />
     </LinearLayout>
 </layout>

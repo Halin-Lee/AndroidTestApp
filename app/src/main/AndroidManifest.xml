@@ -12,22 +12,34 @@
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".DataBinding.DataBindingTestActivity"
+            android:name=".DataBinding.Base.DataBindingBaseActivity"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name=".DataBindingList.DataBindingListActivity"
+            android:name=".DataBinding.List.DataBindingListActivity"
             android:theme="@style/AppTheme" />
 
         <activity
-        android:name=".DataBindingEvent.DataBindingEventActivity"
+        android:name=".DataBinding.Event.DataBindingEventActivity"
         android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".DataBinding.Import.DataBindingImportActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".DataBinding.Custom.DataBindingCustomActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".DataBinding.Include.DataBindingIncludeActivity"
+            android:theme="@style/AppTheme" />
+
     </application>
 
 </manifest>

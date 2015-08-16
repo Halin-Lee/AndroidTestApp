@@ -1,4 +1,4 @@
-package halin.me.testapp.DataBindingEvent;
+package halin.me.testapp.DataBinding.Event;
 
 import android.app.Activity;
 import android.databinding.DataBindingUtil;

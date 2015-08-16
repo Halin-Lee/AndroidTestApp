@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <!--导入静态常量-->
+        <import type="halin.me.testapp.DataBinding.Import.Model.DataBindingImportConstant" />
+
+        <!--导入静态常量并更换名称-->
+        <import
+            alias="alias"
+            type="halin.me.testapp.DataBinding.Import.Model.DataBindingImportAliasConstant" />
+
+        <!-- 导入数组-->
+        <import type="java.util.List" />
+
+        <import type="halin.me.testapp.DataBinding.Import.Model.DataBindingImportModel" />
+
+        <variable
+            name="modelList"
+            type="List&lt;DataBindingImportModel>" />
+
+        <!--类型强转-->
+        <import type="halin.me.testapp.DataBinding.Import.Model.DataBindingImportSubModel" />
+
+        <!-- 调用转换方法-->
+        <import type="halin.me.testapp.DataBinding.Import.Model.DataBindingImportMethod"/>
+        <variable
+            name="methodModel"
+            type="halin.me.testapp.DataBinding.Import.Model.DataBindingImportMethod"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{DataBindingImportConstant.CONSTANT_STRING_HELLO}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{alias.ALIAS_CONSTANT_STRING_HELLO}" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{modelList[1].string}" />
+
+        <!-- 类型强转-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{((DataBindingImportSubModel)modelList[2]).subString}" />
+
+
+        <!-- 方法调用,静态-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{DataBindingImportMethod.staticMethod(modelList[1].string)}" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{DataBindingImportMethod.staticMethod(DataBindingImportConstant.CONSTANT_STRING_HELLO)}" />
+
+        <!-- 方法调用,动态-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{methodModel.method(modelList[1].string)}" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{methodModel.method(DataBindingImportConstant.CONSTANT_STRING_HELLO)}" />
+
+    </LinearLayout>
+</layout>

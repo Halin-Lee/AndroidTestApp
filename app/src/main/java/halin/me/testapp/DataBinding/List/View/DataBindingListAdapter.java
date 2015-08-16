@@ -1,4 +1,4 @@
-package halin.me.testapp.DataBindingList.View;
+package halin.me.testapp.DataBinding.List.View;
 
 import android.databinding.DataBindingUtil;
 import android.view.LayoutInflater;
@@ -6,8 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
-import java.util.List;
-
+import halin.me.testapp.ListBinding;
 import halin.me.testapp.R;
 
 /**
@@ -40,9 +39,11 @@ public class DataBindingListAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-
-        halin.me.testapp.BindListData dataBinding =  DataBindingUtil.inflate(mInflater, R.layout.data_binding_list_item, parent, false);
+        //通过layoutInflate获得绑定
+        ListBinding dataBinding =  DataBindingUtil.inflate(mInflater, R.layout.data_binding_list_item, parent, false);
+        //设置绑定参数
         dataBinding.setBindListModel("Yes");
+        //通过dataBinding获得对应的view
         return dataBinding.getRoot();
     }
 }

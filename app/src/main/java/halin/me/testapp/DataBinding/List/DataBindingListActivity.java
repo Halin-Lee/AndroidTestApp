@@ -1,10 +1,10 @@
-package halin.me.testapp.DataBindingList;
+package halin.me.testapp.DataBinding.List;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ListView;
 
-import halin.me.testapp.DataBindingList.View.DataBindingListAdapter;
+import halin.me.testapp.DataBinding.List.View.DataBindingListAdapter;
 import halin.me.testapp.R;
 
 /**
