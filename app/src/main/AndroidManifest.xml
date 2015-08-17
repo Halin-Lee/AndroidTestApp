@@ -39,6 +39,9 @@
         <activity
             android:name=".DataBinding.Include.DataBindingIncludeActivity"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".DataBinding.Expression.DataBindingExpressionActivity"
+            android:theme="@style/AppTheme" />
 
     </application>
 

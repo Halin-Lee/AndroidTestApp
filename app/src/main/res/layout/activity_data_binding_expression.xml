@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <!-- 表达式判断部分测试-->
+        <variable
+            name="emptyString"
+            type="String" />
+
+        <variable
+            name="string"
+            type="String" />
+
+        <variable
+            name="string2"
+            type="String" />
+
+        <!-- 空模型部分测试-->
+        <variable
+            name="model"
+            type="halin.me.testapp.DataBinding.Expression.Model.ExpressionEmptyModel" />
+
+        <!-- List,Map测试-->
+        <import type="android.util.SparseArray" />
+
+        <import type="java.util.Map" />
+
+        <import type="java.util.List" />
+
+        <variable
+            name="list"
+            type="List&lt;String>" />
+
+        <variable
+            name="sparse"
+            type="SparseArray&lt;String>" />
+
+        <variable
+            name="map"
+            type="Map&lt;Object, String>" />
+
+        <variable
+            name="index"
+            type="int" />
+
+        <variable
+            name="key"
+            type="String" />
+
+        <variable
+            name="keyObject"
+            type="Object" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!-- 表达式使用,空判断-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{ emptyString ?? string2}" />
+
+        <!-- 表达式使用,三元表达-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{emptyString != null ? emptyString : string}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{string2 != null ? string2 : string}" />
+        <!-- 表达式使用,拼接-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@{"emptyString is empty ?" + (emptyString == null? "YES" : "NO")}' />
+
+        <!-- 为空时自动填充内容-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{model.string}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(model.intValue)}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(model.floatValue)}" />
+
+        <!-- List,SparseArray,Map使用示例-->
+        <!-- 如果此时list为空,将崩溃-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{list[2]}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{sparse[index]}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{map[keyObject]}" />
+
+        <!--文本 &quot使用-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/material_blue_grey_800"
+            android:singleLine="false"
+            android:text='@{&quot;使用quot替换双引号\n &quot; + &quot;开头用quot,结尾用双引号也可以\n" + "反过来也可以\n&quot; + "要在xml的参数里面使用双引号,则外面必须是单引号"}' />
+
+         <!-- 资源使用-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:text='@{@string/hello_world}' />
+
+        <!-- 复数资源-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:text='@{@plurals/plural(1) + " " + @plurals/plural(10)}' />
+
+        <!-- 文本格式化-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:text='@{@string/formatString("a","b")}' />
+        <!-- int 数组资源读取 @intArray-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:text='@{String.valueOf(@intArray/intArray[3])}' />
+
+        <!-- String资源读取 @stringArray -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="false"
+            android:text='@{@stringArray/stringArray[3]}' />
+
+
+    </LinearLayout>
+</layout>

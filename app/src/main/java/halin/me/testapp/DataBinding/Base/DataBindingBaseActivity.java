@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 
 import halin.me.testapp.BaseBinding;
-import halin.me.testapp.DataBinding.Base.view.BindModel;
+import halin.me.testapp.DataBinding.Base.Model.BindModel;
 import halin.me.testapp.R;
 
 /**
@@ -29,6 +29,7 @@ public class DataBindingBaseActivity extends Activity {
         //构造模型并设置到绑定模型中
         BindModel model = new BindModel();
         model.stringToShow = "Yes!";
+        model.setPrivateString("Private String");
         dataBinding.setBindModel(model);
     }
 

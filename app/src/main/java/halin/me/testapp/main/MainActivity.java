@@ -12,6 +12,7 @@ import java.util.List;
 import halin.me.testapp.DataBinding.Base.DataBindingBaseActivity;
 import halin.me.testapp.DataBinding.Custom.DataBindingCustomActivity;
 import halin.me.testapp.DataBinding.Event.DataBindingEventActivity;
+import halin.me.testapp.DataBinding.Expression.DataBindingExpressionActivity;
 import halin.me.testapp.DataBinding.Import.DataBindingImportActivity;
 import halin.me.testapp.DataBinding.Include.DataBindingIncludeActivity;
 import halin.me.testapp.DataBinding.List.DataBindingListActivity;
@@ -22,8 +23,25 @@ import halin.me.testapp.main.view.MainPresenter;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    private static String[] NAME_ARRAY = new String[]{"DataBinder测试", "DataBinderList测试", "DataBinder事件绑定测试", "DataBinder导入测试", "自定义DataBinder", "Include测试"};
-    private static Class[] CLASS_ARRAY = new Class[]{DataBindingBaseActivity.class, DataBindingListActivity.class, DataBindingEventActivity.class, DataBindingImportActivity.class, DataBindingCustomActivity.class, DataBindingIncludeActivity.class};
+    private static String[] NAME_ARRAY = new String[]{
+            "DataBinder测试",
+            "DataBinderList测试",
+            "DataBinder事件绑定测试",
+            "DataBinder导入测试",
+            "自定义DataBinder",
+            "Include测试",
+            "Expression测试"};
+
+
+
+    private static Class[] CLASS_ARRAY = new Class[]{
+            DataBindingBaseActivity.class,
+            DataBindingListActivity.class,
+            DataBindingEventActivity.class,
+            DataBindingImportActivity.class,
+            DataBindingCustomActivity.class,
+            DataBindingIncludeActivity.class,
+            DataBindingExpressionActivity.class};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
