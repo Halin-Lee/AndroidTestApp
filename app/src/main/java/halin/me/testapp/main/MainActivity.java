@@ -11,11 +11,14 @@ import java.util.List;
 
 import halin.me.testapp.DataBinding.Base.DataBindingBaseActivity;
 import halin.me.testapp.DataBinding.Custom.DataBindingCustomActivity;
+import halin.me.testapp.DataBinding.DataObjects.DataBindingObservableCollectionActivity;
+import halin.me.testapp.DataBinding.DataObjects.DataBindingObservableFieldActivity;
 import halin.me.testapp.DataBinding.Event.DataBindingEventActivity;
 import halin.me.testapp.DataBinding.Expression.DataBindingExpressionActivity;
 import halin.me.testapp.DataBinding.Import.DataBindingImportActivity;
 import halin.me.testapp.DataBinding.Include.DataBindingIncludeActivity;
 import halin.me.testapp.DataBinding.List.DataBindingListActivity;
+import halin.me.testapp.DataBinding.DataObjects.DataBindingObservableObjectActivity;
 import halin.me.testapp.base.BasePresenterListModel;
 import halin.me.testapp.base.ListItemListener;
 import halin.me.testapp.main.view.MainPresenter;
@@ -30,7 +33,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             "DataBinder导入测试",
             "自定义DataBinder",
             "Include测试",
-            "Expression测试"};
+            "Expression测试",
+            "ObservableObject测试",
+            "ObservableField测试",
+            "ObservableCollection测试"
+    };
 
 
 
@@ -41,7 +48,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             DataBindingImportActivity.class,
             DataBindingCustomActivity.class,
             DataBindingIncludeActivity.class,
-            DataBindingExpressionActivity.class};
+            DataBindingExpressionActivity.class,
+            DataBindingObservableObjectActivity.class,
+            DataBindingObservableFieldActivity.class,
+            DataBindingObservableCollectionActivity.class
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

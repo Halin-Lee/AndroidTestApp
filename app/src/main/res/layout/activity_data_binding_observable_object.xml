@@ -1,0 +1,30 @@
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 定义绑定器的类-->
+    <data class=".ObservableObjectBinding">
+        <!-- 定义绑定器的参数 @param name 名称 @param type 对应的类-->
+        <variable
+            name="observableObject"
+            type="halin.me.testapp.DataBinding.DataObjects.Model.ObservableObjectModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{observableObject.firstName}" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{observableObject.lastName}" />
+    </LinearLayout>
+</layout>
