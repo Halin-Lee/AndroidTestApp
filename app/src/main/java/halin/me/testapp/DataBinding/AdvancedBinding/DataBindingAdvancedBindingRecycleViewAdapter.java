@@ -42,10 +42,9 @@ public class DataBindingAdvancedBindingRecycleViewAdapter extends RecyclerView.A
 
     @Override
     public void onBindViewHolder(DataBindingRecycleViewHolder dataBindingRecycleViewHolder, int i) {
+        //两套layout使用同一个string参数
         dataBindingRecycleViewHolder.getBinding().setVariable(BR.string,mDataSet[i]);
         dataBindingRecycleViewHolder.getBinding().executePendingBindings();
-
-        Log.e("", "here");
     }
 
 

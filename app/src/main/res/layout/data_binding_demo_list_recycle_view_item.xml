@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 定义绑定器的类-->
+    <data>
+
+        <import type="android.databinding.ObservableList" />
+        <!-- 定义绑定器的参数 @param name 名称 @param type 对应的类-->
+        <variable
+            name="observableList"
+            type="ObservableList&lt;String>" />
+
+        <variable
+            name="index"
+            type="int" />
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text='@{"数据:" + observableList[index]}' />
+
+    </LinearLayout>
+</layout>

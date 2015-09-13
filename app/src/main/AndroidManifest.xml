@@ -64,6 +64,10 @@
             android:theme="@style/AppTheme" />
 
         <activity
+            android:name=".DataBinding.DemoList.DataBindingDemoListActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
             android:name=".RecycleView.Base.RecycleViewBaseActivity"
             android:theme="@style/AppTheme" />
 

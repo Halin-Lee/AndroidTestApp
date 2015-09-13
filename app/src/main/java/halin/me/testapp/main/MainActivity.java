@@ -14,6 +14,7 @@ import halin.me.testapp.DataBinding.Base.DataBindingBaseActivity;
 import halin.me.testapp.DataBinding.Custom.DataBindingCustomActivity;
 import halin.me.testapp.DataBinding.DataObjects.DataBindingObservableCollectionActivity;
 import halin.me.testapp.DataBinding.DataObjects.DataBindingObservableFieldActivity;
+import halin.me.testapp.DataBinding.DemoList.DataBindingDemoListActivity;
 import halin.me.testapp.DataBinding.Event.DataBindingEventActivity;
 import halin.me.testapp.DataBinding.Expression.DataBindingExpressionActivity;
 import halin.me.testapp.DataBinding.GeneratedBinding.DataBindingGeneratedBindingActivity;
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             "ObservableCollection测试",
             "GeneratedBinding绑定测试",
             "AdvancedBinding动态绑定测试",
+            "DataBinding Demo",
             "RecycleViewBase测试"
     };
 
@@ -60,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             DataBindingObservableCollectionActivity.class,
             DataBindingGeneratedBindingActivity.class,
             DataBindingAdvancedBindingActivity.class,
+            DataBindingDemoListActivity.class,
             RecycleViewBaseActivity.class
     };
 
