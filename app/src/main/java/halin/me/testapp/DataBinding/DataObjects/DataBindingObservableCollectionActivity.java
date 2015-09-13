@@ -73,8 +73,6 @@ public class DataBindingObservableCollectionActivity extends Activity {
             @Override
             public void run() {
 
-
-
                 map.put("objectA",new Object(){
                     @Override
                     public String toString() {

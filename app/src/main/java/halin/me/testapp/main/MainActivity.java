@@ -15,6 +15,7 @@ import halin.me.testapp.DataBinding.DataObjects.DataBindingObservableCollectionA
 import halin.me.testapp.DataBinding.DataObjects.DataBindingObservableFieldActivity;
 import halin.me.testapp.DataBinding.Event.DataBindingEventActivity;
 import halin.me.testapp.DataBinding.Expression.DataBindingExpressionActivity;
+import halin.me.testapp.DataBinding.GeneratedBinding.DataBindingGeneratedBindingActivity;
 import halin.me.testapp.DataBinding.Import.DataBindingImportActivity;
 import halin.me.testapp.DataBinding.Include.DataBindingIncludeActivity;
 import halin.me.testapp.DataBinding.List.DataBindingListActivity;
@@ -36,7 +37,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             "Expression测试",
             "ObservableObject测试",
             "ObservableField测试",
-            "ObservableCollection测试"
+            "ObservableCollection测试",
+            "GeneratedBinding绑定测试"
     };
 
 
@@ -51,7 +53,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             DataBindingExpressionActivity.class,
             DataBindingObservableObjectActivity.class,
             DataBindingObservableFieldActivity.class,
-            DataBindingObservableCollectionActivity.class
+            DataBindingObservableCollectionActivity.class,
+            DataBindingGeneratedBindingActivity.class
     };
 
     @Override

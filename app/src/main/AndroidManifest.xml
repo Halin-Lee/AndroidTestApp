@@ -25,8 +25,8 @@
             android:theme="@style/AppTheme" />
 
         <activity
-        android:name=".DataBinding.Event.DataBindingEventActivity"
-        android:theme="@style/AppTheme" />
+            android:name=".DataBinding.Event.DataBindingEventActivity"
+            android:theme="@style/AppTheme" />
 
         <activity
             android:name=".DataBinding.Import.DataBindingImportActivity"
@@ -43,14 +43,21 @@
             android:name=".DataBinding.Expression.DataBindingExpressionActivity"
             android:theme="@style/AppTheme" />
 
-        <activity android:name=".DataBinding.DataObjects.DataBindingObservableObjectActivity"
-            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".DataBinding.DataObjects.DataBindingObservableObjectActivity"
+            android:theme="@style/AppTheme" />
 
-        <activity android:name=".DataBinding.DataObjects.DataBindingObservableFieldActivity"
-            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".DataBinding.DataObjects.DataBindingObservableFieldActivity"
+            android:theme="@style/AppTheme" />
 
-        <activity android:name=".DataBinding.DataObjects.DataBindingObservableCollectionActivity"
-            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".DataBinding.DataObjects.DataBindingObservableCollectionActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".DataBinding.GeneratedBinding.DataBindingGeneratedBindingActivity"
+            android:theme="@style/AppTheme" />
 
 
     </application>
