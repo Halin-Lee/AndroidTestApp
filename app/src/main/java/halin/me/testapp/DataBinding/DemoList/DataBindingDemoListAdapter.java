@@ -58,6 +58,7 @@ public class DataBindingDemoListAdapter extends RecyclerView.Adapter<DataBinding
         return mDataList.size();
     }
 
+    //TODO:选中状态的标示
     protected class DataBindingDemoListViewHolder extends RecyclerView.ViewHolder{
 
         public ViewDataBinding getBinding(){
