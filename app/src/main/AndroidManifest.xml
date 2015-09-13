@@ -59,6 +59,14 @@
             android:name=".DataBinding.GeneratedBinding.DataBindingGeneratedBindingActivity"
             android:theme="@style/AppTheme" />
 
+        <activity
+            android:name=".DataBinding.AdvancedBinding.DataBindingAdvancedBindingActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".RecycleView.Base.RecycleViewBaseActivity"
+            android:theme="@style/AppTheme" />
+
 
     </application>
 
