@@ -16,6 +16,8 @@
             </intent-filter>
         </activity>
 
+
+        <!-- dataBinding测试Activity-->
         <activity
             android:name=".DataBinding.Base.DataBindingBaseActivity"
             android:theme="@style/AppTheme" />
@@ -67,6 +69,11 @@
             android:name=".DataBinding.DemoList.DataBindingDemoListActivity"
             android:theme="@style/AppTheme" />
 
+        <activity android:name=".DataBinding.Observable.DataBindingObservableActivity"/>
+
+
+
+        <!-- recycleView测试Activity-->
         <activity
             android:name=".RecycleView.Base.RecycleViewBaseActivity"
             android:theme="@style/AppTheme" />

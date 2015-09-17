@@ -15,6 +15,9 @@ import halin.me.testapp.BR;
 import halin.me.testapp.R;
 
 /**
+ * 使用Index作为子view内容选项的DEMO
+ *
+ *
  * Created by halin on 9/13/15.
  */
 public class DataBindingDemoListAdapter extends RecyclerView.Adapter<DataBindingDemoListAdapter.DataBindingDemoListViewHolder>{

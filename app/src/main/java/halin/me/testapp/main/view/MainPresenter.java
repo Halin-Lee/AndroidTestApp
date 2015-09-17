@@ -11,6 +11,9 @@ import halin.me.testapp.base.BasePresenterListModel;
 
 
 /**
+ *
+ * 做数据绑定工作
+ *
  * Created by halin on 8/15/15.
  */
 public class MainPresenter extends BasePresenter implements AdapterView.OnItemClickListener {

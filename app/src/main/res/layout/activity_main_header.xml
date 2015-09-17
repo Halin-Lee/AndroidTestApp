@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 定义绑定器的类-->
+    <data class=".MainHeaderBinding">
+        <!-- 定义绑定器的参数 @param name 名称 @param type 对应的类-->
+        <import type="android.databinding.ObservableList" />
+        <import type="halin.me.testapp.main.Model.TestGroup"/>
+        <variable
+            name="dataHolder"
+            type="halin.me.testapp.main.MainDataHolder" />
+
+        <variable
+            name="groupIndex"
+            type="int"/>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{dataHolder.getTestList().get(groupIndex).groupName}" />
+
+    </LinearLayout>
+</layout>
