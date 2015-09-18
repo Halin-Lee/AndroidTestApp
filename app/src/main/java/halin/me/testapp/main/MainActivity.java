@@ -3,6 +3,7 @@ package halin.me.testapp.main;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 
@@ -26,63 +27,22 @@ import halin.me.testapp.DataBinding.Observable.DataBindingObservableActivity;
 import halin.me.testapp.RecycleView.Base.RecycleViewBaseActivity;
 import halin.me.testapp.base.BasePresenterListModel;
 import halin.me.testapp.base.ListItemListener;
+import halin.me.testapp.main.Model.TestBuilder;
 import halin.me.testapp.main.view.MainPresenter;
 
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-    private static String[] NAME_ARRAY = new String[]{
-            "DataBinder测试",
-            "DataBinderList测试",
-            "DataBinder事件绑定测试",
-            "DataBinder导入测试",
-            "自定义DataBinder",
-            "Include测试",
-            "Expression测试",
-            "ObservableObject测试",
-            "ObservableField测试",
-            "ObservableCollection测试",
-            "GeneratedBinding绑定测试",
-            "AdvancedBinding动态绑定测试",
-            "DataBinding Demo",
-            "Observable测试",
-            "RecycleViewBase测试"
-    };
-
-
-
-    private static Class[] CLASS_ARRAY = new Class[]{
-            DataBindingBaseActivity.class,
-            DataBindingListActivity.class,
-            DataBindingEventActivity.class,
-            DataBindingImportActivity.class,
-            DataBindingCustomActivity.class,
-            DataBindingIncludeActivity.class,
-            DataBindingExpressionActivity.class,
-            DataBindingObservableObjectActivity.class,
-            DataBindingObservableFieldActivity.class,
-            DataBindingObservableCollectionActivity.class,
-            DataBindingGeneratedBindingActivity.class,
-            DataBindingAdvancedBindingActivity.class,
-            DataBindingDemoListActivity.class,
-            DataBindingObservableActivity.class,
-            RecycleViewBaseActivity.class
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        List<String> nameList = Arrays.asList(NAME_ARRAY);
-        BasePresenterListModel<String> listModel = new BasePresenterListModel<>(nameList, new ListItemListener<String>() {
-            @Override
-            public void itemCallback(String s, int position) {
-                Intent intent = new Intent(MainActivity.this, CLASS_ARRAY[position]);
-                MainActivity.this.startActivity(intent);
-            }
-        });
 
-        new MainPresenter(this, listModel).init();
+        MainDataHolder dataHolder = new MainDataHolder();
+
+        dataHolder.setTestList(new TestBuilder().build());
+        new MainPresenter(this,dataHolder).init();
 
 
     }

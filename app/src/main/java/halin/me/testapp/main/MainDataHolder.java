@@ -1,6 +1,7 @@
 package halin.me.testapp.main;
 
 import android.databinding.ObservableArrayList;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,9 +19,9 @@ public class MainDataHolder {
         return new ArrayList(testList);
     }
 
-    public void setTestList(List<TestGroup> mTestList) {
-        mTestList.clear();
-        mTestList.addAll(mTestList);
+    public void setTestList(List<TestGroup> testList) {
+        this.testList.clear();
+        this.testList.addAll(testList);
     }
 
 }

@@ -6,25 +6,13 @@
     <!-- 定义绑定器的类-->
     <data class=".MainItemBinding">
         <!-- 定义绑定器的参数 @param name 名称 @param type 对应的类-->
-        <import type="android.databinding.ObservableList" />
-        <import type="halin.me.testapp.main.Model.TestGroup"/>
-
         <variable
-            name="dataHolder"
-            type="halin.me.testapp.main.MainDataHolder" />
-
-        <variable
-            name="groupIndex"
-            type="int"/>
-
-
-        <variable
-            name="itemIndex"
-            type="int"/>
-
+            name="testItem"
+            type="halin.me.testapp.main.Model.TestItem" />
     </data>
 
     <LinearLayout
+        android:layout_marginLeft="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -32,8 +20,8 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@{dataHolder.getTestList().get(groupIndex).items.get(itemIndex).testName}" />
+            android:layout_height="20dp"
+            android:text="@{testItem.testName}" />
 
     </LinearLayout>
 </layout>

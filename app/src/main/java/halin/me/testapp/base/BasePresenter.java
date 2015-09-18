@@ -23,7 +23,6 @@ public abstract class BasePresenter {
 
     public void init(){
         mContext.setContentView(getActivityLayoutID());
-
     }
 
     public abstract int getActivityLayoutID();
