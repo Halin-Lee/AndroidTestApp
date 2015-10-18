@@ -6,22 +6,45 @@
     <!-- 定义绑定器的类-->
     <data class=".MainItemBinding">
         <!-- 定义绑定器的参数 @param name 名称 @param type 对应的类-->
+
+
+        <!-- 定义绑定器的参数 @param name 名称 @param type 对应的类-->
+        <import type="android.databinding.ObservableList" />
+
+        <import type="halin.me.testapp.main.Model.TestItem" />
+
         <variable
-            name="testItem"
-            type="halin.me.testapp.main.Model.TestItem" />
+            name="dataHolder"
+            type="halin.me.testapp.main.MainDataHolder" />
+
+
+        <variable
+            name="index"
+            type="int" />
+
+        <import type="android.view.View" />
     </data>
 
     <LinearLayout
-        android:layout_marginLeft="10dp"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <!-- index为0的时候(第一项)或者testGroup名称与上一项不同的时候,才显示header-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@{((TestItem)dataHolder.testList[index]).testGroup}"
+            android:textSize="25dp"
+            android:visibility="@{(index == 0 || !((TestItem)dataHolder.testList[index]).testGroup.equals( ((TestItem)dataHolder.testList[index-1]).testGroup))  ? View.VISIBLE : View.GONE}" />
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:text="@{testItem.testName}" />
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:text="@{((TestItem)dataHolder.testList[index]).testName}"
+            android:textSize="17dp" />
 
     </LinearLayout>
 </layout>

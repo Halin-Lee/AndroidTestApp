@@ -11,6 +11,9 @@ import android.widget.Toast;
 import halin.me.testapp.R;
 
 /**
+ *
+ * 自定义ObservableField监听
+ *
  * Created by halin on 9/17/15.
  */
 public class DataBindingObservableActivity extends Activity {

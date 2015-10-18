@@ -1,7 +1,5 @@
 package halin.me.testapp.main.Model;
 
-import android.app.Activity;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,40 +20,72 @@ import halin.me.testapp.DataBinding.Observable.DataBindingObservableActivity;
 import halin.me.testapp.RecycleView.Base.RecycleViewBaseActivity;
 
 /**
+ * 测试参数构造
+ * <p/>
  * Created by halin on 9/17/15.
  */
 public class TestBuilder {
 
-    public final List<TestGroup> testGroupList = new ArrayList<>();
+    public final List<TestItem> testGroupList = new ArrayList<>();
 
-    public List<TestGroup> build() {
+    public List<TestItem> build() {
 
         //DataBinding;
-        TestGroup dataBindingGroup = new TestGroup("DataBinding测试");
-        dataBindingGroup.add("DataBinder测试", DataBindingBaseActivity.class);
-        dataBindingGroup.add("DataBinderList测试", DataBindingListActivity.class);
-        dataBindingGroup.add("DataBinder事件绑定测试", DataBindingEventActivity.class);
-        dataBindingGroup.add("DataBinder导入测试", DataBindingImportActivity.class);
-        dataBindingGroup.add("自定义DataBinder", DataBindingCustomActivity.class);
-        dataBindingGroup.add("Include测试", DataBindingIncludeActivity.class);
-        dataBindingGroup.add("Expression测试", DataBindingExpressionActivity.class);
-        dataBindingGroup.add("ObservableObject测试", DataBindingObservableObjectActivity.class);
-        dataBindingGroup.add("ObservableField测试", DataBindingObservableFieldActivity.class);
-        dataBindingGroup.add("ObservableCollection测试", DataBindingObservableCollectionActivity.class);
-        dataBindingGroup.add("GeneratedBinding绑定测试", DataBindingGeneratedBindingActivity.class);
-        dataBindingGroup.add("AdvancedBinding动态绑定测试", DataBindingAdvancedBindingActivity.class);
-        dataBindingGroup.add("DataBinding Demo", DataBindingDemoListActivity.class);
-        dataBindingGroup.add("Observable测试", DataBindingObservableActivity.class);
-        testGroupList.add(dataBindingGroup);
+        String dataBindingTestGroupName = "DataBinding测试";
+        add(dataBindingTestGroupName, "DataBinder测试", DataBindingBaseActivity.class);
+        add(dataBindingTestGroupName, "DataBinderList测试", DataBindingListActivity.class);
+        add(dataBindingTestGroupName, "DataBinder事件绑定测试", DataBindingEventActivity.class);
+        add(dataBindingTestGroupName, "DataBinder导入测试", DataBindingImportActivity.class);
+        add(dataBindingTestGroupName, "自定义DataBinder", DataBindingCustomActivity.class);
+        add(dataBindingTestGroupName, "Include测试", DataBindingIncludeActivity.class);
+        add(dataBindingTestGroupName, "Expression测试", DataBindingExpressionActivity.class);
+        add(dataBindingTestGroupName, "ObservableObject测试", DataBindingObservableObjectActivity.class);
+        add(dataBindingTestGroupName, "ObservableField测试", DataBindingObservableFieldActivity.class);
+        add(dataBindingTestGroupName, "ObservableCollection测试", DataBindingObservableCollectionActivity.class);
+        add(dataBindingTestGroupName, "GeneratedBinding绑定测试", DataBindingGeneratedBindingActivity.class);
+        add(dataBindingTestGroupName, "AdvancedBinding动态绑定测试", DataBindingAdvancedBindingActivity.class);
+        add(dataBindingTestGroupName, "DataBinding Demo", DataBindingDemoListActivity.class);
+        add(dataBindingTestGroupName, "Observable测试", DataBindingObservableActivity.class);
 
         //recycleView
-        TestGroup recycleViewGroup = new TestGroup("RecycleView测试");
-        recycleViewGroup.add("RecycleViewBase测试", RecycleViewBaseActivity.class);
-        testGroupList.add(recycleViewGroup);
+        String recycleViewTestGroupName = "RecycleView测试";
+        add(recycleViewTestGroupName, "RecycleViewBase测试", RecycleViewBaseActivity.class);
 
 
         return testGroupList;
     }
 
+
+    public List<TestItem> build2() {
+
+        //DataBinding;
+        String dataBindingTestGroupName = "DataBinding测试";
+        add(dataBindingTestGroupName, "DataBinder测试", DataBindingBaseActivity.class);
+        add(dataBindingTestGroupName, "DataBinderList测试", DataBindingListActivity.class);
+        add(dataBindingTestGroupName, "DataBinder事件绑定测试", DataBindingEventActivity.class);
+        add(dataBindingTestGroupName, "DataBinder导入测试", DataBindingImportActivity.class);
+        add(dataBindingTestGroupName, "自定义DataBinder", DataBindingCustomActivity.class);
+        add(dataBindingTestGroupName, "Include测试", DataBindingIncludeActivity.class);
+        add(dataBindingTestGroupName, "Expression测试", DataBindingExpressionActivity.class);
+        add(dataBindingTestGroupName, "ObservableObject测试", DataBindingObservableObjectActivity.class);
+        add(dataBindingTestGroupName, "ObservableField测试", DataBindingObservableFieldActivity.class);
+        add(dataBindingTestGroupName, "ObservableCollection测试", DataBindingObservableCollectionActivity.class);
+        add(dataBindingTestGroupName, "GeneratedBinding绑定测试", DataBindingGeneratedBindingActivity.class);
+        add(dataBindingTestGroupName, "AdvancedBinding动态绑定测试", DataBindingAdvancedBindingActivity.class);
+        add(dataBindingTestGroupName, "DataBinding Demo", DataBindingDemoListActivity.class);
+        add(dataBindingTestGroupName, "Observable测试", DataBindingObservableActivity.class);
+
+        //recycleView
+        String recycleViewTestGroupName = "RecycleView测试";
+        add(recycleViewTestGroupName, "RecycleViewBase测试", RecycleViewBaseActivity.class);
+
+
+        return testGroupList;
+    }
+
+    protected void add(String groupName, String testName, Class clazz) {
+        TestItem testItem = new TestItem(groupName, testName, clazz);
+        testGroupList.add(testItem);
+    }
 
 }

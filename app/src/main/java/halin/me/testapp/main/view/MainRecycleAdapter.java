@@ -1,6 +1,7 @@
 package halin.me.testapp.main.view;
 
 import android.databinding.DataBindingUtil;
+import android.databinding.Observable;
 import android.databinding.ObservableList;
 import android.databinding.ViewDataBinding;
 import android.support.v7.widget.RecyclerView;
@@ -13,9 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import halin.me.testapp.BR;
+import halin.me.testapp.MainItemBinding;
 import halin.me.testapp.R;
 import halin.me.testapp.main.MainDataHolder;
-import halin.me.testapp.main.Model.TestGroup;
 import halin.me.testapp.main.Model.TestItem;
 
 /**
@@ -23,88 +24,77 @@ import halin.me.testapp.main.Model.TestItem;
  */
 public class MainRecycleAdapter extends RecyclerView.Adapter<MainRecycleAdapter.MainViewHolder> {
 
-    private final List<Object> mData = new ArrayList<>();
+
+    public static final String TAG = MainRecycleAdapter.class.getSimpleName();
+
+    public final MainDataHolder mHolder;
 
     public MainRecycleAdapter(MainDataHolder holder) {
-        holder.testList.addOnListChangedCallback(new ObservableList.OnListChangedCallback<ObservableList<TestGroup>>() {
+        mHolder = holder;
+
+
+        //添加监听,list的所有改变都调用notifyDataSetChanged改变内容
+        holder.testList.addOnListChangedCallback(new ObservableList.OnListChangedCallback() {
             @Override
-            public void onChanged(ObservableList<TestGroup> sender) {
-                generatedData(sender);
+            public void onChanged(ObservableList sender) {
+                notifyDataSetChanged();
             }
 
             @Override
-            public void onItemRangeChanged(ObservableList<TestGroup> sender, int positionStart, int itemCount) {
-
+            public void onItemRangeChanged(ObservableList sender, int positionStart, int itemCount) {
+                notifyDataSetChanged();
             }
 
             @Override
-            public void onItemRangeInserted(ObservableList<TestGroup> sender, int positionStart, int itemCount) {
-
+            public void onItemRangeInserted(ObservableList sender, int positionStart, int itemCount) {
+                notifyDataSetChanged();
             }
 
             @Override
-            public void onItemRangeMoved(ObservableList<TestGroup> sender, int fromPosition, int toPosition, int itemCount) {
-
+            public void onItemRangeMoved(ObservableList sender, int fromPosition, int toPosition, int itemCount) {
+                notifyDataSetChanged();
             }
 
             @Override
-            public void onItemRangeRemoved(ObservableList<TestGroup> sender, int positionStart, int itemCount) {
-
+            public void onItemRangeRemoved(ObservableList sender, int positionStart, int itemCount) {
+                notifyDataSetChanged();
             }
         });
-        generatedData(holder.testList);
+
     }
-
-
-    private void generatedData(ObservableList<TestGroup> sender) {
-        mData.clear();
-        for (TestGroup group : sender){
-            mData.add(group);
-            for (TestItem item :group.items ) {
-                mData.add(item);
-            }
-        }
-    }
-
-
 
 
     @Override
     public MainViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        Log.e("",""+viewType);
-        View view =  DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),viewType,parent,false).getRoot() ;
+        //构造binding,设置holder,绑定点击回调
+        ViewDataBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.activity_main_item, parent, false);
+        binding.setVariable(BR.dataHolder, mHolder);
+        View view = binding.getRoot();
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainItemBinding binding = DataBindingUtil.getBinding(v);
+                int index = binding.getIndex();
+                TestItem item = mHolder.testList.get(index);
+                mHolder.itemClickListener.get().onItemClick(item);
+            }
+        });
         return new MainViewHolder(view);
-    }
-
-    @Override
-    public int getItemViewType(int position) {
-        if ( mData.get(position) instanceof TestGroup){
-            return R.layout.activity_main_header;
-        }else {
-            return R.layout.activity_main_item;
-        }
     }
 
     @Override
     public void onBindViewHolder(MainViewHolder holder, int position) {
         ViewDataBinding binding = DataBindingUtil.getBinding(holder.itemView);
-        Object obj = mData.get(position);
-        switch (getItemViewType(position)){
-            case R.layout.activity_main_header:
-                binding.setVariable(BR.testGroup,obj);
-                break;
-            case R.layout.activity_main_item:
-                binding.setVariable(BR.testItem,obj);
-                break;
-        }
+        //为binding设置index
+        binding.setVariable(BR.index, position);
     }
 
     @Override
     public int getItemCount() {
-        return mData.size();
+        return mHolder.testList.size();
     }
 
-    class MainViewHolder extends RecyclerView.ViewHolder{
+    class MainViewHolder extends RecyclerView.ViewHolder {
         public MainViewHolder(View itemView) {
             super(itemView);
         }

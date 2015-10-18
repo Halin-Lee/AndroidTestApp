@@ -69,8 +69,7 @@
             android:name=".DataBinding.DemoList.DataBindingDemoListActivity"
             android:theme="@style/AppTheme" />
 
-        <activity android:name=".DataBinding.Observable.DataBindingObservableActivity"/>
-
+        <activity android:name=".DataBinding.Observable.DataBindingObservableActivity" />
 
 
         <!-- recycleView测试Activity-->
@@ -78,6 +77,11 @@
             android:name=".RecycleView.Base.RecycleViewBaseActivity"
             android:theme="@style/AppTheme" />
 
+
+        <!-- 17TRACK测试Activity-->
+        <activity
+            android:name=".Developer.YQTRACK.translate.Developer17TrackActivity"
+            android:theme="@style/AppTheme" />
 
     </application>
 

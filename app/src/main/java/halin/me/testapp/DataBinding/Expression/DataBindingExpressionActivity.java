@@ -9,11 +9,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 import halin.me.testapp.R;
 import halin.me.testapp.databinding.ActivityDataBindingExpressionBinding;
-import halin.me.testapp.databinding.ActivityDataBindingIncludeBinding;
 
 /**
  * Created by halin on 8/16/15.
