@@ -21,7 +21,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text='@{"类型B"+string}'
+            android:text='@{"Layout B 参数:"+string}'
             android:id="@+id/test_view_id"/>
 
     </LinearLayout>

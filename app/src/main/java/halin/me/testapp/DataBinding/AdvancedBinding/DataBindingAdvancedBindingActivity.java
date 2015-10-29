@@ -8,6 +8,9 @@ import android.support.v7.widget.RecyclerView;
 import halin.me.testapp.R;
 
 /**
+ *
+ * 使用setVariable方法使两个xml layout公用一个变量名,具体示例在Adapter中
+ *
  * Created by halin on 9/13/15.
  */
 public class DataBindingAdvancedBindingActivity extends Activity {

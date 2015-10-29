@@ -15,6 +15,9 @@ import halin.me.testapp.main.Model.TestItem;
 import halin.me.testapp.main.view.MainPresenter;
 
 
+/**
+ * 主启动Activity
+ */
 public class MainActivity extends AppCompatActivity implements MainDataHolder.ItemClickListener {
 
 
@@ -29,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements MainDataHolder.It
         dataHolder.itemClickListener.set(this);
 
         dataHolder.testList.addAll(new TestBuilder().build());
-        new MainPresenter(this,dataHolder).init();
+        new MainPresenter(this, dataHolder).init();
 
 
         //用于测试dataHolder数据改变对view的影响
@@ -46,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements MainDataHolder.It
 
     @Override
     public void onItemClick(TestItem item) {
-        Intent intent = new Intent(this,item.activityClass);
+        Intent intent = new Intent(this, item.activityClass);
         startActivity(intent);
     }
 

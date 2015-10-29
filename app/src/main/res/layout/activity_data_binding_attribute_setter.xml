@@ -4,7 +4,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- 定义绑定器的类-->
-    <data >
+    <data class=".AttributeSetterBinding">
         <!-- 定义绑定器的参数 @param name 名称 @param type 对应的类-->
         <variable
             name="string"
@@ -17,12 +17,9 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
-        <TextView
+        <halin.me.testapp.DataBinding.AttributeSetter.View.AttributeSetterView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text='@{"Layout A 参数:"+string}'
-            android:id="@+id/test_view_id"/>
-
+            android:customAttribute="@{string}" />
     </LinearLayout>
 </layout>

@@ -3,7 +3,9 @@ package halin.me.testapp.main.Model;
 import java.util.ArrayList;
 import java.util.List;
 
+import halin.me.testapp.AttributeSetterBinding;
 import halin.me.testapp.DataBinding.AdvancedBinding.DataBindingAdvancedBindingActivity;
+import halin.me.testapp.DataBinding.AttributeSetter.DataBindingAttributeSetterActivity;
 import halin.me.testapp.DataBinding.Base.DataBindingBaseActivity;
 import halin.me.testapp.DataBinding.Custom.DataBindingCustomActivity;
 import halin.me.testapp.DataBinding.DataObjects.DataBindingObservableCollectionActivity;
@@ -46,6 +48,7 @@ public class TestBuilder {
         add(dataBindingTestGroupName, "AdvancedBinding动态绑定测试", DataBindingAdvancedBindingActivity.class);
         add(dataBindingTestGroupName, "DataBinding Demo", DataBindingDemoListActivity.class);
         add(dataBindingTestGroupName, "Observable测试", DataBindingObservableActivity.class);
+        add(dataBindingTestGroupName, "DataBinding Attribute Setter", DataBindingAttributeSetterActivity.class);
 
         //recycleView
         String recycleViewTestGroupName = "RecycleView测试";

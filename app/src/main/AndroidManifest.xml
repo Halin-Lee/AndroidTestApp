@@ -71,6 +71,8 @@
 
         <activity android:name=".DataBinding.Observable.DataBindingObservableActivity" />
 
+        <activity android:name=".DataBinding.AttributeSetter.DataBindingAttributeSetterActivity" />
+
 
         <!-- recycleView测试Activity-->
         <activity
