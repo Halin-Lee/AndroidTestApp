@@ -3,7 +3,6 @@ package halin.me.testapp.main.Model;
 import java.util.ArrayList;
 import java.util.List;
 
-import halin.me.testapp.AttributeSetterBinding;
 import halin.me.testapp.DataBinding.AdvancedBinding.DataBindingAdvancedBindingActivity;
 import halin.me.testapp.DataBinding.AttributeSetter.DataBindingAttributeSetterActivity;
 import halin.me.testapp.DataBinding.Base.DataBindingBaseActivity;
@@ -28,7 +27,7 @@ import halin.me.testapp.RecycleView.Base.RecycleViewBaseActivity;
  */
 public class TestBuilder {
 
-    public final List<TestItem> testGroupList = new ArrayList<>();
+    public final List<TestItem> testList = new ArrayList<>();
 
     public List<TestItem> build() {
 
@@ -55,7 +54,7 @@ public class TestBuilder {
         add(recycleViewTestGroupName, "RecycleViewBase测试", RecycleViewBaseActivity.class);
 
 
-        return testGroupList;
+        return testList;
     }
 
 
@@ -83,12 +82,12 @@ public class TestBuilder {
         add(recycleViewTestGroupName, "RecycleViewBase测试", RecycleViewBaseActivity.class);
 
 
-        return testGroupList;
+        return testList;
     }
 
     protected void add(String groupName, String testName, Class clazz) {
         TestItem testItem = new TestItem(groupName, testName, clazz);
-        testGroupList.add(testItem);
+        testList.add(testItem);
     }
 
 }

@@ -21,5 +21,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:customAttribute="@{string}" />
+
+        <halin.me.testapp.DataBinding.AttributeSetter.View.AttributeSetterView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:customBindingAdapter="@{string}" />
+
+        <halin.me.testapp.DataBinding.AttributeSetter.View.AttributeSetterView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:customBindingAdapterText1="@{string}"
+            android:customBindingAdapterText2="@{string}" />
     </LinearLayout>
 </layout>
