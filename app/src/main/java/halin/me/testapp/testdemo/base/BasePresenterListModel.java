@@ -1,4 +1,4 @@
-package halin.me.testapp.base;
+package halin.me.testapp.testdemo.base;
 
 import java.util.List;
 

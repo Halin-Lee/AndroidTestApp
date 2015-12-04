@@ -1,7 +1,6 @@
-package halin.me.testapp.base;
+package halin.me.testapp.testdemo.base;
 
 import android.app.Activity;
-import android.content.Context;
 import android.view.LayoutInflater;
 
 /**

@@ -1,17 +1,14 @@
 package halin.me.testapp.main.view;
 
 import android.app.Activity;
-import android.content.DialogInterface;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ListView;
 
 import halin.me.testapp.R;
-import halin.me.testapp.base.BasePresenter;
-import halin.me.testapp.base.BasePresenterListModel;
+import halin.me.testapp.testdemo.base.BasePresenter;
+import halin.me.testapp.testdemo.base.BasePresenterListModel;
 import halin.me.testapp.main.MainDataHolder;
 
 
@@ -54,6 +51,6 @@ public class MainPresenter extends BasePresenter  {
 
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-//        mListModel.getListItemListener().itemCallback( mListModel.getListItems().get(position),position)
+//        mListModel.getListItemListener().itemCallback( mListModel.getListItems().getABC(position),position)
     }
 }
