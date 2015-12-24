@@ -10,7 +10,7 @@ public class LoggerConstant {
     /**
      * 是否开启调试模式
      */
-    static final boolean DEBUG = false;
+    static final boolean DEBUG = true;
 
     /**
      * 事件统计,类别,点击事件

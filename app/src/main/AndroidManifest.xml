@@ -3,8 +3,8 @@
     package="halin.me.testapp">
 
     <application
-        android:allowBackup="true"
         android:name=".main.Application"
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
@@ -83,9 +83,14 @@
 
         <!-- 17TRACK测试Activity-->
         <activity
-            android:name=".Developer.YQTRACK.translate.Developer17TrackActivity"
+            android:name=".testdemo.espresso.example.EspressoTestActivity"
             android:theme="@style/AppTheme" />
 
+
+        <!-- 可搜索内容-->
+        <provider
+            android:name=".SearchableActivity.SearchableProvider"
+            android:authorities="de.openminds.SampleRecentSuggestionsProvider"></provider>
     </application>
 
 </manifest>

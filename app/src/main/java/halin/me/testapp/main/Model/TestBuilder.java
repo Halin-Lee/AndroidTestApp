@@ -19,6 +19,7 @@ import halin.me.testapp.DataBinding.Include.DataBindingIncludeActivity;
 import halin.me.testapp.DataBinding.List.DataBindingListActivity;
 import halin.me.testapp.DataBinding.Observable.DataBindingObservableActivity;
 import halin.me.testapp.RecycleView.Base.RecycleViewBaseActivity;
+import halin.me.testapp.testdemo.espresso.example.EspressoTestActivity;
 
 /**
  * 测试参数构造
@@ -53,6 +54,9 @@ public class TestBuilder {
         String recycleViewTestGroupName = "RecycleView测试";
         add(recycleViewTestGroupName, "RecycleViewBase测试", RecycleViewBaseActivity.class);
 
+        //testDemo
+        String testDemoGroupName = "测试用例编写";
+        add(testDemoGroupName, "Espresso测试", EspressoTestActivity.class);
 
         return testList;
     }
