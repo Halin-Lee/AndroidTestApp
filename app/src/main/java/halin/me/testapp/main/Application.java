@@ -1,5 +1,8 @@
 package halin.me.testapp.main;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import halin.me.fundamental.LogTools.Logger;
 
 /**
@@ -19,5 +22,7 @@ public class Application extends android.app.Application {
 
         instance = this;
         Logger.init(this);
+
+        Arrays.asList(new ArrayList<>());
     }
 }
