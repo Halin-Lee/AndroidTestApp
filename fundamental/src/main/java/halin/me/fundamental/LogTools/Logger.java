@@ -39,8 +39,6 @@ public class Logger {
             //调试使用testIn日志工具
             logUtil = LoggerType.LoggerTypeTestIn.getLogUtil();
         } else {
-            //正式环境使用Google分析工具
-            logUtil = LoggerType.LoggerTypeGoogle.getLogUtil();
         }
         logUtil.setup(application);
         Logger.log("日志工具%s初始化完成", TAG);

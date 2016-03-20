@@ -20,59 +20,59 @@
 
         <!-- dataBinding测试Activity-->
         <activity
-            android:name=".DataBinding.Base.DataBindingBaseActivity"
+            android:name=".databinding.Base.DataBindingBaseActivity"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name=".DataBinding.List.DataBindingListActivity"
+            android:name=".databinding.List.DataBindingListActivity"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name=".DataBinding.Event.DataBindingEventActivity"
+            android:name=".databinding.Event.DataBindingEventActivity"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name=".DataBinding.Import.DataBindingImportActivity"
+            android:name=".databinding.Import.DataBindingImportActivity"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name=".DataBinding.Custom.DataBindingCustomActivity"
+            android:name=".databinding.Custom.DataBindingCustomActivity"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name=".DataBinding.Include.DataBindingIncludeActivity"
+            android:name=".databinding.Include.DataBindingIncludeActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".DataBinding.Expression.DataBindingExpressionActivity"
-            android:theme="@style/AppTheme" />
-
-        <activity
-            android:name=".DataBinding.DataObjects.DataBindingObservableObjectActivity"
+            android:name=".databinding.Expression.DataBindingExpressionActivity"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name=".DataBinding.DataObjects.DataBindingObservableFieldActivity"
+            android:name=".databinding.DataObjects.DataBindingObservableObjectActivity"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name=".DataBinding.DataObjects.DataBindingObservableCollectionActivity"
+            android:name=".databinding.DataObjects.DataBindingObservableFieldActivity"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name=".DataBinding.GeneratedBinding.DataBindingGeneratedBindingActivity"
+            android:name=".databinding.DataObjects.DataBindingObservableCollectionActivity"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name=".DataBinding.AdvancedBinding.DataBindingAdvancedBindingActivity"
+            android:name=".databinding.GeneratedBinding.DataBindingGeneratedBindingActivity"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name=".DataBinding.DemoList.DataBindingDemoListActivity"
+            android:name=".databinding.AdvancedBinding.DataBindingAdvancedBindingActivity"
             android:theme="@style/AppTheme" />
 
-        <activity android:name=".DataBinding.Observable.DataBindingObservableActivity" />
+        <activity
+            android:name=".databinding.DemoList.DataBindingDemoListActivity"
+            android:theme="@style/AppTheme" />
 
-        <activity android:name=".DataBinding.AttributeSetter.DataBindingAttributeSetterActivity" />
+        <activity android:name=".databinding.Observable.DataBindingObservableActivity" />
+
+        <activity android:name=".databinding.AttributeSetter.DataBindingAttributeSetterActivity" />
 
 
         <!-- recycleView测试Activity-->

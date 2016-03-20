@@ -6,7 +6,7 @@
         <!-- 定义绑定器的参数 @param name 名称 @param type 对应的类-->
         <variable
             name="observableObject"
-            type="halin.me.testapp.DataBinding.DataObjects.Model.ObservableObjectModel" />
+            type="halin.me.testapp.databinding.DataObjects.Model.ObservableObjectModel" />
 
     </data>
 

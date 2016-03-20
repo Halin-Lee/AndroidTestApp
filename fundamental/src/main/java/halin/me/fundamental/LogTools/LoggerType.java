@@ -9,18 +9,6 @@ public enum LoggerType {
     //避免LoggerType在构造的时候将所有的LogUtil初始化,
 
     /**
-     * 谷歌分析日志
-     */
-    LoggerTypeGoogle(
-            new LogUtilGetter() {
-                @Override
-                public LogUtil getLogUtil() {
-                    return new LogUtilGoogle();
-                }
-            }
-    ),
-
-    /**
      * 云测分析
      */
     LoggerTypeTestIn(new LogUtilGetter() {
