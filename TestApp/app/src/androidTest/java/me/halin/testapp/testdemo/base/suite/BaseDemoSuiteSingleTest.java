@@ -1,4 +1,4 @@
-package halin.me.testapp.testdemo.base.suite;
+package me.halin.testapp.testdemo.base.suite;
 
 import android.support.test.runner.AndroidJUnit4;
 

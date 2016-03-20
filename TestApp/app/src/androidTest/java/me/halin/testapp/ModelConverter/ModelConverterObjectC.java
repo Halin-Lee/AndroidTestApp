@@ -1,4 +1,4 @@
-package halin.me.testapp.ModelConverter;
+package me.halin.testapp.ModelConverter;
 
 /**
  * Created by halin on 12/21/15.

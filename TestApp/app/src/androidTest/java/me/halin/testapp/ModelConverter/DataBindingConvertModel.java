@@ -1,4 +1,4 @@
-package halin.me.testapp.ModelConverter;
+package me.halin.testapp.ModelConverter;
 
 import android.databinding.ObservableField;
 

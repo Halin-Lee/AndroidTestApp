@@ -1,4 +1,4 @@
-package halin.me.testapp.testdemo.mock.junit;
+package me.halin.testapp.testdemo.mock.junit;
 
 import android.support.test.InstrumentationRegistry;
 import android.test.AndroidTestCase;
@@ -16,7 +16,7 @@ import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import halin.me.testapp.main.Application;
+import me.halin.testapp.main.Application;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;

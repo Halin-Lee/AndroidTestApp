@@ -1,15 +1,8 @@
-package halin.me.testapp.other;
+package me.halin.testapp.other;
 
-import android.util.Log;
-
-import org.apache.commons.codec.DecoderException;
-import org.apache.commons.codec.binary.Hex;
 import org.junit.Test;
 
-import java.io.UnsupportedEncodingException;
-
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 /**
  * Created by halin on 12/3/15.

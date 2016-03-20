@@ -1,4 +1,4 @@
-package halin.me.testapp.testdemo.espresso.example;
+package me.halin.testapp.testdemo.espresso.example;
 
 /**
  * Created by halin on 12/4/15.
@@ -12,8 +12,8 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import halin.me.testapp.R;
-import halin.me.testapp.testdemo.espresso.example.EspressoTestActivity;
+import me.halin.testapp.R;
+import me.halin.testapp.testdemo.espresso.example.EspressoTestActivity;
 
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;

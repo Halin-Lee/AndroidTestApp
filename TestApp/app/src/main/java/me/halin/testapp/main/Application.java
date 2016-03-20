@@ -3,7 +3,6 @@ package me.halin.testapp.main;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-
 /**
  * Created by halin on 11/24/15.
  */

@@ -82,7 +82,7 @@
 
         <!-- 17TRACK测试Activity-->
         <activity
-            android:name="me.halin.testapp.testdemo.espresso.example.EspressoTestActivity"
+            android:name=".testdemo.espresso.example.EspressoTestActivity"
             android:theme="@style/AppTheme" />
 
 

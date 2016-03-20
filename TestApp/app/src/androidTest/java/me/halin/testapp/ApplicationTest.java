@@ -1,4 +1,4 @@
-package halin.me.testapp;
+package me.halin.testapp;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
