@@ -17,17 +17,17 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <halin.me.testapp.databinding.AttributeSetter.View.AttributeSetterView
+        <me.halin.testapp.databinding.AttributeSetter.View.AttributeSetterView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:customAttribute="@{string}" />
 
-        <halin.me.testapp.databinding.AttributeSetter.View.AttributeSetterView
+        <me.halin.testapp.databinding.AttributeSetter.View.AttributeSetterView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:customBindingAdapter="@{string}" />
 
-        <halin.me.testapp.databinding.AttributeSetter.View.AttributeSetterView
+        <me.halin.testapp.databinding.AttributeSetter.View.AttributeSetterView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:customBindingAdapterText1="@{string}"

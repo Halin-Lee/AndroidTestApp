@@ -3,30 +3,30 @@
 
     <data>
         <!--导入静态常量-->
-        <import type="halin.me.testapp.databinding.Import.Model.DataBindingImportConstant" />
+        <import type="me.halin.testapp.databinding.Import.Model.DataBindingImportConstant" />
 
         <!--导入静态常量并更换名称-->
         <import
             alias="alias"
-            type="halin.me.testapp.databinding.Import.Model.DataBindingImportAliasConstant" />
+            type="me.halin.testapp.databinding.Import.Model.DataBindingImportAliasConstant" />
 
         <!-- 导入数组-->
         <import type="java.util.List" />
 
-        <import type="halin.me.testapp.databinding.Import.Model.DataBindingImportModel" />
+        <import type="me.halin.testapp.databinding.Import.Model.DataBindingImportModel" />
 
         <variable
             name="modelList"
             type="List&lt;DataBindingImportModel>" />
 
         <!--类型强转-->
-        <import type="halin.me.testapp.databinding.Import.Model.DataBindingImportSubModel" />
+        <import type="me.halin.testapp.databinding.Import.Model.DataBindingImportSubModel" />
 
         <!-- 调用转换方法-->
-        <import type="halin.me.testapp.databinding.Import.Model.DataBindingImportMethod"/>
+        <import type="me.halin.testapp.databinding.Import.Model.DataBindingImportMethod"/>
         <variable
             name="methodModel"
-            type="halin.me.testapp.databinding.Import.Model.DataBindingImportMethod"/>
+            type="me.halin.testapp.databinding.Import.Model.DataBindingImportMethod"/>
     </data>
 
     <LinearLayout

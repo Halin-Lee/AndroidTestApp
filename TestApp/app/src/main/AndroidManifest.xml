@@ -1,0 +1,95 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="me.halin.testapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="me.halin.testapp.main.MainActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- dataBinding测试Activity-->
+        <activity
+            android:name="me.halin.testapp.databinding.Base.DataBindingBaseActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="me.halin.testapp.databinding.List.DataBindingListActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="me.halin.testapp.databinding.Event.DataBindingEventActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="me.halin.testapp.databinding.Import.DataBindingImportActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="me.halin.testapp.databinding.Custom.DataBindingCustomActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="me.halin.testapp.databinding.Include.DataBindingIncludeActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="me.halin.testapp.databinding.Expression.DataBindingExpressionActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="me.halin.testapp.databinding.DataObjects.DataBindingObservableObjectActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="me.halin.testapp.databinding.DataObjects.DataBindingObservableFieldActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="me.halin.testapp.databinding.DataObjects.DataBindingObservableCollectionActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="me.halin.testapp.databinding.GeneratedBinding.DataBindingGeneratedBindingActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="me.halin.testapp.databinding.AdvancedBinding.DataBindingAdvancedBindingActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name="me.halin.testapp.databinding.DemoList.DataBindingDemoListActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity android:name="me.halin.testapp.databinding.Observable.DataBindingObservableActivity" />
+
+        <activity android:name="me.halin.testapp.databinding.AttributeSetter.DataBindingAttributeSetterActivity" />
+
+
+        <!-- recycleView测试Activity-->
+        <activity
+            android:name="me.halin.testapp.RecycleView.Base.RecycleViewBaseActivity"
+            android:theme="@style/AppTheme" />
+
+
+        <!-- 17TRACK测试Activity-->
+        <activity
+            android:name="me.halin.testapp.testdemo.espresso.example.EspressoTestActivity"
+            android:theme="@style/AppTheme" />
+
+
+        <!-- 可搜索内容-->
+        <provider
+            android:name="me.halin.testapp.SearchableActivity.SearchableProvider"
+            android:authorities="de.openminds.SampleRecentSuggestionsProvider"></provider>
+    </application>
+
+</manifest>

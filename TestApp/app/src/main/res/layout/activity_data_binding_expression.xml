@@ -20,7 +20,7 @@
         <!-- 空模型部分测试-->
         <variable
             name="model"
-            type="halin.me.testapp.databinding.Expression.Model.ExpressionEmptyModel" />
+            type="me.halin.testapp.databinding.Expression.Model.ExpressionEmptyModel" />
 
         <!-- List,Map测试-->
         <import type="android.util.SparseArray" />

@@ -11,11 +11,11 @@
         <!-- 定义绑定器的参数 @param name 名称 @param type 对应的类-->
         <import type="android.databinding.ObservableList" />
 
-        <import type="halin.me.testapp.main.Model.TestItem" />
+        <import type="me.halin.testapp.main.Model.TestItem" />
 
         <variable
             name="dataHolder"
-            type="halin.me.testapp.main.MainDataHolder" />
+            type="me.halin.testapp.main.MainDataHolder" />
 
 
         <variable

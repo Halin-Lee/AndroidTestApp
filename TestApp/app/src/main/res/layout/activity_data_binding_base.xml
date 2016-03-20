@@ -1,12 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- 定义绑定器的类-->
-    <data class=".ObservableObjectBinding">
+    <data class=".BaseBinding">
         <!-- 定义绑定器的参数 @param name 名称 @param type 对应的类-->
         <variable
-            name="observableObject"
-            type="halin.me.testapp.databinding.DataObjects.Model.ObservableObjectModel" />
+            name="bindModel"
+            type="me.halin.testapp.databinding.Base.Model.BindModel" />
 
     </data>
 
@@ -19,12 +21,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{observableObject.firstName}" />
+            android:text="@{bindModel.stringToShow}" />
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{observableObject.lastName}" />
+            android:text="@{bindModel.privateString}" />
     </LinearLayout>
 </layout>

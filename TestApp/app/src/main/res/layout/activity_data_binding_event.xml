@@ -6,7 +6,7 @@
 
         <variable
             name="activity"
-            type="halin.me.testapp.databinding.Event.DataBindingEventActivity" />
+            type="me.halin.testapp.databinding.Event.DataBindingEventActivity" />
     </data>
 
     <LinearLayout

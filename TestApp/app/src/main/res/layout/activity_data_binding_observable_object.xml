@@ -2,11 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- 定义绑定器的类-->
-    <data class=".ObservableFieldBinding">
+    <data class=".ObservableObjectBinding">
         <!-- 定义绑定器的参数 @param name 名称 @param type 对应的类-->
         <variable
-            name="observableField"
-            type="halin.me.testapp.databinding.DataObjects.Model.ObservableFieldModel" />
+            name="observableObject"
+            type="me.halin.testapp.databinding.DataObjects.Model.ObservableObjectModel" />
 
     </data>
 
@@ -19,17 +19,12 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{observableField.firstField}" />
+            android:text="@{observableObject.firstName}" />
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{observableField.secondField.toString()}" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text='@{"Third Field:" + observableField.thirdField}' />
+            android:text="@{observableObject.lastName}" />
     </LinearLayout>
 </layout>
