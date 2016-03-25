@@ -1,4 +1,4 @@
-package me.halin.testapp.testdemo.mock.junit.example;
+package me.halin.testapp.EspressonTestDemo.mock.junit.example;
 
 
 import static org.hamcrest.MatcherAssert.assertThat;

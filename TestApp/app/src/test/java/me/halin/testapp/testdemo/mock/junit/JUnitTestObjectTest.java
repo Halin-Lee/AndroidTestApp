@@ -1,4 +1,4 @@
-package me.halin.testapp.testdemo.mock.junit;
+package me.halin.testapp.EspressonTestDemo.mock.junit;
 
 import android.test.suitebuilder.annotation.SmallTest;
 

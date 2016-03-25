@@ -20,7 +20,7 @@ import me.halin.testapp.databinding.List.DataBindingListActivity;
 import me.halin.testapp.databinding.Observable.DataBindingObservableActivity;
 
 import me.halin.testapp.RecycleView.Base.RecycleViewBaseActivity;
-import me.halin.testapp.testdemo.espresso.example.EspressoTestActivity;
+import me.halin.testapp.EspressonTestDemo.espresso.example.EspressoTestActivity;
 
 /**
 

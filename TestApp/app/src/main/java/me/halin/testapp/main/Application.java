@@ -1,12 +1,11 @@
 package me.halin.testapp.main;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 /**
  * Created by halin on 11/24/15.
  */
 public class Application extends android.app.Application {
+
+    public static final String TAG = Application.class.getName();
 
     private static Application instance;
 
@@ -21,6 +20,5 @@ public class Application extends android.app.Application {
         instance = this;
 
 
-        Arrays.asList(new ArrayList<>());
     }
 }

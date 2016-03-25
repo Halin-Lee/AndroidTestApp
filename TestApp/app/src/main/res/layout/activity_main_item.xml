@@ -28,7 +28,7 @@
     <LinearLayout
 
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <!-- index为0的时候(第一项)或者testGroup名称与上一项不同的时候,才显示header-->

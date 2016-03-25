@@ -3,6 +3,7 @@ package me.halin.testapp.main;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 import me.halin.testapp.main.Model.TestBuilder;
 import me.halin.testapp.main.Model.TestItem;
@@ -16,6 +17,11 @@ public class MainActivity extends AppCompatActivity implements MainDataHolder.It
 
 
     public static final String TAG = MainActivity.class.getSimpleName();
+
+
+    static {
+        Log.e(TAG,"初始化");
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,4 +53,8 @@ public class MainActivity extends AppCompatActivity implements MainDataHolder.It
         startActivity(intent);
     }
 
+    public static void test(){
+        Log.e(TAG,"test");
+
+    }
 }

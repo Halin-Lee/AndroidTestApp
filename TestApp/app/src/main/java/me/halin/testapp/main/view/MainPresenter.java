@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 
 import me.halin.testapp.R;
-import me.halin.testapp.testdemo.base.BasePresenter;
+import me.halin.testapp.EspressonTestDemo.base.BasePresenter;
 import me.halin.testapp.main.MainDataHolder;
 
 
