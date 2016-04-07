@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Environment>
+
+    <Global>
+        <string androidName="testStringValue">stringValue</string>
+        <integer androidName="testIntegerValue">123456</integer>
+        <float androidName="testFloatValue">123.456</float>
+    </Global>
+
+
+    <Module androidName="FirstDemoModuleConfiguration">
+        <string androidName="firstParam">firstParam</string>
+        <string androidName="secondParam">secondParam</string>
+    </Module>
+
+    <Module androidName="SecondDemoModuleConfiguration">
+        <integer androidName="firstParam">123456</integer>
+        <float androidName="secondParam">123.456</float>
+    </Module>
+
+
+</Environment>

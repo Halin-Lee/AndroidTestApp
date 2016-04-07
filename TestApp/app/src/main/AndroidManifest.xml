@@ -23,7 +23,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
                 <!-- 拦截所有以 "Halin://"开头的URL -->
                 <data android:scheme="Halin" />
-                <data android:host="Test"/>
+                <data android:host="Test" />
             </intent-filter>
         </activity>
 
@@ -98,11 +98,18 @@
             android:theme="@style/AppTheme" />
 
 
-        <!-- 17TRACK测试Activity-->
+        <!-- 测试Activity-->
         <activity
             android:name=".EspressonTestDemo.espresso.example.EspressoTestActivity"
             android:theme="@style/AppTheme" />
 
+        <!-- 自动化埋点-->
+        <activity
+            android:name=".AutoEventTracking.Demo.AutoEventTrackingDemoActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".AutoEventTracking.Demo.AutoEventTrackingFragmentDemoActivity"
+            android:theme="@style/AppTheme" />
 
         <!-- 可搜索内容-->
         <!--<provider-->

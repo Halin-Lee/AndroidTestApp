@@ -3,6 +3,9 @@ package me.halin.testapp.main.Model;
 import java.util.ArrayList;
 import java.util.List;
 
+import me.halin.testapp.AutoEventTracking.Demo.AutoEventTrackingDemoActivity;
+import me.halin.testapp.AutoEventTracking.Demo.AutoEventTrackingFragmentDemoActivity;
+import me.halin.testapp.AutoEventTracking.Demo.AutoEventTrackingFragmentDemoFragment;
 import me.halin.testapp.databinding.AdvancedBinding.DataBindingAdvancedBindingActivity;
 import me.halin.testapp.databinding.AttributeSetter.DataBindingAttributeSetterActivity;
 import me.halin.testapp.databinding.Base.DataBindingBaseActivity;
@@ -23,10 +26,9 @@ import me.halin.testapp.RecycleView.Base.RecycleViewBaseActivity;
 import me.halin.testapp.EspressonTestDemo.espresso.example.EspressoTestActivity;
 
 /**
-
-/**
+ * /**
  * 测试参数构造
- * <p/>
+ * <p>
  * Created by halin on 9/17/15.
  */
 public class TestBuilder {
@@ -60,6 +62,12 @@ public class TestBuilder {
         //testDemo
         String testDemoGroupName = "测试用例编写";
         add(testDemoGroupName, "Espresso测试", EspressoTestActivity.class);
+
+        //自动化埋点
+        String autoEventTracking = "自动化埋点";
+        add(autoEventTracking, "自动化埋点", AutoEventTrackingDemoActivity.class);
+        add(autoEventTracking, "自动化埋点,Fragment", AutoEventTrackingFragmentDemoActivity.class);
+
 
         return testList;
     }

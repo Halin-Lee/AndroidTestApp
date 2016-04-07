@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoEventTracker>
+
+
+    <Activity name="me.halin.testapp.AutoEventTracking.Demo.AutoEventTrackingDemoActivity">
+        <item
+            name="事件名称1"
+            context="left"
+            id="test_id_1"
+            type="tap" />
+
+        <item
+            name="事件名称2"
+            from="left"
+            id="test_id_2"
+            index="3"
+            type="tap" />
+    </Activity>
+</AutoEventTracker>
