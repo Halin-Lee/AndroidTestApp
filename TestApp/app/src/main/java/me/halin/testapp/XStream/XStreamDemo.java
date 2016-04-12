@@ -1,17 +1,15 @@
 package me.halin.testapp.XStream;
 
 import android.content.Context;
-import android.location.Address;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamAsAttribute;
-import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
 import java.io.IOException;
 import java.io.InputStream;
 
-import me.halin.testapp.LogUtil.Logger;
+import me.halin.fundamental.LogUtil.Logger;
 
 /**
  * Created by 17track on 3/26/16.

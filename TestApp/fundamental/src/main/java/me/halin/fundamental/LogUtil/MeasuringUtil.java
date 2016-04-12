@@ -1,6 +1,4 @@
-package me.halin.testapp.LogUtil;
-
-import me.halin.testapp.LogUtil.LogUtil;
+package me.halin.fundamental.LogUtil;
 
 /**
  * Created by halin on 10/14/15.

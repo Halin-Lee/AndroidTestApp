@@ -1,6 +1,6 @@
 package me.halin.testapp.AutoEventTracking;
 
-import me.halin.testapp.LogUtil.Logger;
+import me.halin.fundamental.LogUtil.Logger;
 
 /**
  * Created by 17track on 4/7/16.

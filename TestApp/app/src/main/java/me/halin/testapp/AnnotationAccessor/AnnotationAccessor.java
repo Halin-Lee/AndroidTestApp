@@ -7,7 +7,7 @@ import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.Map;
 
-import me.halin.testapp.LogUtil.Logger;
+import me.halin.fundamental.LogUtil.Logger;
 
 /**
  * 注解写入工具

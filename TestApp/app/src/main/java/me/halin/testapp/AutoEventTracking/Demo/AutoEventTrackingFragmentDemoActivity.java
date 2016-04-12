@@ -41,7 +41,7 @@ public class AutoEventTrackingFragmentDemoActivity extends AppCompatActivity imp
             actionBar.setDisplayUseLogoEnabled(false);
         }
 
-        setContentView(R.layout.activity_auto_event_tracking_demo_activity);
+        setContentView(R.layout.activity_auto_event_tracking_demo);
         viewPager = (ViewPager) findViewById(R.id.auto_event_tracking_demo_view_pager);
         viewPager.setAdapter(new AutoEventTrackingFragmentDemoAdapter(getSupportFragmentManager()));
         viewPager.addOnPageChangeListener(this);

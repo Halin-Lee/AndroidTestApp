@@ -1,4 +1,4 @@
-package me.halin.testapp.LogUtil;
+package me.halin.fundamental.LogUtil;
 
 /**
  * 日志工具抽象类

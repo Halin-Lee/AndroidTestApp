@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import me.halin.testapp.LogUtil.Logger;
+import me.halin.fundamental.LogUtil.Logger;
 
 /**
  * Created by 17track on 4/6/16.
@@ -164,5 +164,4 @@ public class AutoEventTrackerXMLLoader {
             return context.getResources().getIdentifier(id, "id", context.getPackageName());
         }
     }
-
 }

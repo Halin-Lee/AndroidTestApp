@@ -1,4 +1,4 @@
-package me.halin.testapp.LogUtil;
+package me.halin.fundamental.LogUtil;
 
 import android.app.Application;
 import android.content.Context;

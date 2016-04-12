@@ -1,4 +1,4 @@
-package me.halin.testapp.LogUtil;
+package me.halin.fundamental.LogUtil;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

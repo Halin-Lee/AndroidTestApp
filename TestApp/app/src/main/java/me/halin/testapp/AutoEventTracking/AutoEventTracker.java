@@ -13,14 +13,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import me.halin.testapp.LogUtil.Logger;
+import me.halin.fundamental.LogUtil.Logger;
 
 /**
  * Created by 17track on 3/25/16.
  */
 public class AutoEventTracker implements GestureDetector.OnGestureListener {
-
     public static final String TAG = AutoEventTracker.class.getName();
+
 
     private EventTrackerCallback callback = new EventTrackerCallback() {
         @Override
@@ -29,16 +29,24 @@ public class AutoEventTracker implements GestureDetector.OnGestureListener {
         }
     };
 
-    /**当前页面名称*/
+    /**
+     * 当前页面名称
+     */
     private String pageName = "";
 
-    /**页面名称前缀*/
+    /**
+     * 页面名称前缀
+     */
     private String prefixString = "";
 
-    /**手势分析*/
+    /**
+     * 手势分析
+     */
     private GestureDetector gestureDetector;
 
-    /**window的底层view*/
+    /**
+     * window的底层view
+     */
     private View rootView;
 
     /***/
@@ -277,5 +285,12 @@ public class AutoEventTracker implements GestureDetector.OnGestureListener {
         }
     }
 
+    public EventTrackerCallback getCallback() {
+        return callback;
+    }
+
+    public void setCallback(EventTrackerCallback callback) {
+        this.callback = callback;
+    }
 
 }

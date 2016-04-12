@@ -1,6 +1,6 @@
 package me.halin.testapp.ModuleLoader.Demo;
 
-import me.halin.testapp.LogUtil.Logger;
+import me.halin.fundamental.LogUtil.Logger;
 import me.halin.testapp.ModuleLoader.ConfigField;
 import me.halin.testapp.ModuleLoader.InitializableInterface;
 
