@@ -28,12 +28,12 @@ public class AutoEventTrackerXMLLoader {
 
     private HashMap<String, List<TrackEventItem>> itemMap = new HashMap<>();
 
-    private HashMap<String, String> pageMap = new HashMap<>();
+    private HashMap<String, String> screenMap = new HashMap<>();
 
     public void loadFromXml(Context context, int id) {
         XmlResourceParser parser = context.getResources().getXml(id);
 
-        List<TrackEventItem> itemList = null;
+        List<TrackEventItem> itemList = new ArrayList<>();
         try {
             //如果没有到文件尾继续执行
             while (parser.getEventType() != XmlResourceParser.END_DOCUMENT) {
@@ -44,12 +44,12 @@ public class AutoEventTrackerXMLLoader {
                     //判断标签名称是否等于friend
 
                     switch (name) {
-                        case "Activity":
+                        case "Screen":
                             //解析Activity标签
                             itemList = new ArrayList<>();
                             int attributeCount = parser.getAttributeCount();
 
-                            String pageName = null;
+                            String screenName = null;
                             String className = null;
                             for (int index = 0; index < attributeCount; index++) {
                                 String attributeName = parser.getAttributeName(index);
@@ -58,7 +58,7 @@ public class AutoEventTrackerXMLLoader {
                                         className = parser.getAttributeValue(index);
                                         break;
                                     case "name":
-                                        pageName = parser.getAttributeValue(index);
+                                        screenName = parser.getAttributeValue(index);
                                         break;
                                 }
                             }
@@ -67,7 +67,7 @@ public class AutoEventTrackerXMLLoader {
                                 Logger.logE(TAG, "Activity class 为空");
                             } else {
                                 itemMap.put(className, itemList);
-                                pageMap.put(className, pageName);
+                                screenMap.put(className, screenName);
                             }
 
                             break;
@@ -120,10 +120,8 @@ public class AutoEventTrackerXMLLoader {
                 parser.next();
             }
 
-            Logger.log(TAG, "事件跟踪列表加载完成,事件表:%s,页面表:%s", itemMap, pageMap);
-        } catch (XmlPullParserException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
+            Logger.log(TAG, "事件跟踪列表加载完成,事件表:%s,页面表:%s", itemMap, screenMap);
+        } catch (XmlPullParserException | IOException e) {
             e.printStackTrace();
         }
 
@@ -139,7 +137,7 @@ public class AutoEventTrackerXMLLoader {
     }
 
     public String getPageName(String activity) {
-        String name = pageMap.get(activity);
+        String name = screenMap.get(activity);
         return name != null ? name : activity;
     }
 
