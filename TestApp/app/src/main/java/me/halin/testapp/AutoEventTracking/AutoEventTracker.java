@@ -1,6 +1,8 @@
 package me.halin.testapp.AutoEventTracking;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.res.Resources;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
@@ -16,21 +18,25 @@ import java.util.Set;
 import me.halin.fundamental.LogUtil.Logger;
 
 /**
- *
  * 事件跟踪工具
- *
+ * <p/>
  * Created by 17track on 3/25/16.
  */
 public class AutoEventTracker implements GestureDetector.OnGestureListener {
     public static final String TAG = AutoEventTracker.class.getName();
 
-
+    /**
+     * 回调
+     */
     private EventTrackerCallback callback = new EventTrackerCallback() {
         @Override
         public void callback(String page, String prefixString, TrackEventItem item, String name) {
             Logger.debug("页面:%s %s 事件:%s", pageName, prefixString, name);
         }
     };
+
+    /***/
+    private Context context;
 
     /**
      * 当前页面名称
@@ -72,6 +78,7 @@ public class AutoEventTracker implements GestureDetector.OnGestureListener {
     }
 
     public AutoEventTracker(Activity activity, EventTrackerCallback callback) {
+        context = activity;
         gestureDetector = new GestureDetector(activity, this);
         rootView = activity.getWindow().getDecorView().getRootView();
         AutoEventTrackerXMLLoader loader = AutoEventTrackerXMLLoader.getInstance();
@@ -117,6 +124,10 @@ public class AutoEventTracker implements GestureDetector.OnGestureListener {
      */
     private View viewFromTouch(View view, MotionEvent event) {
 
+        if (view.getVisibility() != View.VISIBLE) {
+            return null;
+        }
+
         if (isViewContains(view, event)) {
             //点击在view内部
             if (view instanceof ViewGroup) {
@@ -161,7 +172,6 @@ public class AutoEventTracker implements GestureDetector.OnGestureListener {
 
     @Override
     public boolean onDown(MotionEvent e) {
-        String toastString = String.format("onDown");
         return false;
     }
 
@@ -178,7 +188,7 @@ public class AutoEventTracker implements GestureDetector.OnGestureListener {
 
     @Override
     public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
-        
+
 
         //TODO:onScroll做得还不够好,1.没有滑动方向,2.滑动没结束就上报了
         if (!isScrollHappen) {
@@ -196,8 +206,6 @@ public class AutoEventTracker implements GestureDetector.OnGestureListener {
 
     @Override
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
-//        uploadEvent(viewOnTouchDown, TrackEventItem.TYPE_FLING);
-
         return false;
     }
 
@@ -239,7 +247,13 @@ public class AutoEventTracker implements GestureDetector.OnGestureListener {
             id = lastParentViewId(viewOnTouchDown);
             if (id != -1) {
                 //找到父类有id,上报,以后或许有帮助
-                String name = "type:" + String.valueOf(eventType) + ",id:" + String.valueOf(id);
+                String idName;
+                try {
+                    idName = context.getResources().getResourceName(id);
+                } catch (Resources.NotFoundException e) {
+                    idName = String.valueOf(id);
+                }
+                String name = "type:" + String.valueOf(eventType) + ",id:" + idName;
                 callback.callback(pageName, prefixString, null, name);
             }
             return;
