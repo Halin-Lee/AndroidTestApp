@@ -16,6 +16,9 @@ import java.util.Set;
 import me.halin.fundamental.LogUtil.Logger;
 
 /**
+ *
+ * 事件跟踪工具
+ *
  * Created by 17track on 3/25/16.
  */
 public class AutoEventTracker implements GestureDetector.OnGestureListener {
@@ -25,7 +28,7 @@ public class AutoEventTracker implements GestureDetector.OnGestureListener {
     private EventTrackerCallback callback = new EventTrackerCallback() {
         @Override
         public void callback(String page, String prefixString, TrackEventItem item, String name) {
-            Logger.debug("页面:%s %s 事件:%s context:%s", pageName, prefixString, name);
+            Logger.debug("页面:%s %s 事件:%s", pageName, prefixString, name);
         }
     };
 
@@ -175,9 +178,10 @@ public class AutoEventTracker implements GestureDetector.OnGestureListener {
 
     @Override
     public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX, float distanceY) {
+        
 
         //TODO:onScroll做得还不够好,1.没有滑动方向,2.滑动没结束就上报了
-        if (isScrollHappen == false) {
+        if (!isScrollHappen) {
             uploadEvent(viewOnTouchDown, TrackEventItem.TYPE_SCROLL);
             isScrollHappen = true;
         }

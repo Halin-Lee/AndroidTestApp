@@ -14,6 +14,8 @@ import java.util.List;
 import me.halin.fundamental.LogUtil.Logger;
 
 /**
+ * 事件跟踪xml加载
+ *
  * Created by 17track on 4/6/16.
  */
 public class AutoEventTrackerXMLLoader {
