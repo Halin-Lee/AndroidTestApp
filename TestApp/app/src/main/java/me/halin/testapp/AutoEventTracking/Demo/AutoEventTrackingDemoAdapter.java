@@ -10,7 +10,7 @@ import me.halin.fundamental.LogUtil.Logger;
 import me.halin.testapp.R;
 
 /**
- * Created by 17track on 3/25/16.
+ * Created by Halin on 3/25/16.
  */
 public class AutoEventTrackingDemoAdapter extends PagerAdapter {
 

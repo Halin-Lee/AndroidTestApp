@@ -27,7 +27,7 @@ public class DaggerStudyApplication extends android.app.Application {
 
 //        XStreamDemo.test(this);
 //        ModuleLoader.getInstance().loadModule(this, GlobalConfiguration.getInstance(), DemoModuleDeclaration.class, "AppEnvironmentConfig.xml", null);
-        Dagger2Demo.test(this);
+
 
         Logger.debug("Test Start");
     }

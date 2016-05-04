@@ -16,7 +16,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  * <p>
  * public static final Class demoModuleConfiguration = DemoModuleConfiguration.class;
  * <p>
- * Created by 17track on 3/27/16.
+ * Created by Halin on 3/27/16.
  */
 @Retention(RUNTIME)
 @Target(FIELD)

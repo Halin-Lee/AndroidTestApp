@@ -3,7 +3,7 @@ package me.halin.testapp.ModuleLoader.Demo;
 import me.halin.testapp.ModuleLoader.ModuleName;
 
 /**
- * Created by 17track on 3/27/16.
+ * Created by Halin on 3/27/16.
  */
 
 public class DemoModuleDeclaration {

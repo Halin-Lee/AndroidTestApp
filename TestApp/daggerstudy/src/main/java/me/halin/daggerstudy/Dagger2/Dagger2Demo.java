@@ -4,6 +4,7 @@ import android.content.Context;
 
 
 import me.halin.daggerstudy.Dagger2.Base.DaggerBaseDemo;
+import me.halin.daggerstudy.Dagger2.InjectMethod.DaggerMethodInjectDemo;
 
 
 /**
@@ -13,6 +14,7 @@ import me.halin.daggerstudy.Dagger2.Base.DaggerBaseDemo;
 public class Dagger2Demo {
 
     public static void test(Context context) {
-         DaggerBaseDemo.test(context);
+//         DaggerBaseDemo.test(context);
+        DaggerMethodInjectDemo.test();
     }
 }

@@ -27,7 +27,7 @@ import me.halin.testapp.R;
 
 
 /**
- * Created by 17track on 4/19/16.
+ * Created by Halin on 4/19/16.
  */
 public class AccountDemoActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 

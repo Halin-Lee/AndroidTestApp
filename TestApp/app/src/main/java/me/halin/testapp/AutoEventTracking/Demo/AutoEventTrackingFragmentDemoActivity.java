@@ -19,7 +19,7 @@ import me.halin.testapp.R;
 
 
 /**
- * Created by 17track on 4/6/16.
+ * Created by Halin on 4/6/16.
  */
 public class AutoEventTrackingFragmentDemoActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
 

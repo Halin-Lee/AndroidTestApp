@@ -10,7 +10,7 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 /**
- * Created by 17track on 4/19/16.
+ * Created by Halin on 4/19/16.
  */
 public class AccountListAdapter extends BaseAdapter {
 

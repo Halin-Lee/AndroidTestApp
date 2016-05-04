@@ -20,7 +20,7 @@ import me.halin.fundamental.LogUtil.Logger;
 /**
  * 事件跟踪工具
  * <p/>
- * Created by 17track on 3/25/16.
+ * Created by Halin on 3/25/16.
  */
 public class AutoEventTracker implements GestureDetector.OnGestureListener {
     public static final String TAG = AutoEventTracker.class.getName();

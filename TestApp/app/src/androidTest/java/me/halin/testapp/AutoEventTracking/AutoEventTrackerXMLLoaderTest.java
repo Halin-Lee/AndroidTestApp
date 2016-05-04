@@ -12,7 +12,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 /**
- * Created by 17track on 4/6/16.
+ * Created by Halin on 4/6/16.
  */
 public class AutoEventTrackerXMLLoaderTest extends InstrumentationTestCase {
 

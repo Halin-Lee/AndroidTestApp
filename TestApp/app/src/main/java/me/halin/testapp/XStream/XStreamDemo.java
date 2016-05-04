@@ -12,7 +12,7 @@ import java.io.InputStream;
 import me.halin.fundamental.LogUtil.Logger;
 
 /**
- * Created by 17track on 3/26/16.
+ * Created by Halin on 3/26/16.
  */
 
 @XStreamAlias("Demo")

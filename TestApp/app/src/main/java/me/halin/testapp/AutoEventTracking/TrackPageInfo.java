@@ -5,7 +5,7 @@ import android.app.Activity;
 import java.util.List;
 
 /**
- * Created by 17track on 4/6/16.
+ * Created by Halin on 4/6/16.
  */
 public class TrackPageInfo {
 

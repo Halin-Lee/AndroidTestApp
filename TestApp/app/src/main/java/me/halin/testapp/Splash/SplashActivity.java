@@ -9,7 +9,7 @@ import me.halin.testapp.main.MainActivity;
 import me.halin.testapp.databinding.Base.DataBindingBaseActivity;
 
 /**
- * Created by 17track on 3/21/16.
+ * Created by Halin on 3/21/16.
  */
 public class SplashActivity extends Activity {
 

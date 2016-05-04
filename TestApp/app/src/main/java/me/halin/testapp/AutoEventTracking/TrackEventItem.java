@@ -4,7 +4,7 @@ import android.support.annotation.NonNull;
 import android.view.View;
 
 /**
- * Created by 17track on 4/5/16.
+ * Created by Halin on 4/5/16.
  */
 public class TrackEventItem {
 

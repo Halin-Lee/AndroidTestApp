@@ -17,7 +17,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
  * <string androidName="testStringValue">stringValue</string>
  * <p>
  * <p>
- * Created by 17track on 3/26/16.
+ * Created by Halin on 3/26/16.
  */
 @Retention(RUNTIME)
 @Target(FIELD)

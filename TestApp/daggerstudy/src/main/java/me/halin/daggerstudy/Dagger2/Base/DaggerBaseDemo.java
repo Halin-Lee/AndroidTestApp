@@ -24,13 +24,12 @@ public class DaggerBaseDemo {
     }
 
     /**
-     * @Inject 声明哟啊被注入的对象
+     * @Inject 声明被注入的对象
      */
     @Inject
     Context context;
 
     private DaggerBaseDemo() {
-
 
     }
 

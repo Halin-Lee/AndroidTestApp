@@ -10,7 +10,7 @@ import me.halin.testapp.databinding.ActivityDataBindingIncludeSubBinding;
 
 
 /**
- * Created by 17track on 4/18/16.
+ * Created by Halin on 4/18/16.
  */
 public class CustomLinearLayout extends LinearLayout {
 

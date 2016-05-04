@@ -2,7 +2,7 @@ package me.halin.testapp.AutoEventTracking;
 
 /**
  * 跟踪事件回调
- * Created by 17track on 4/6/16.
+ * Created by Halin on 4/6/16.
  */
 public interface EventTrackerCallback {
     /**

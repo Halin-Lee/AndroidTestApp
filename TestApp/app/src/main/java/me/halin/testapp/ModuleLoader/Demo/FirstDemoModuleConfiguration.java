@@ -5,7 +5,7 @@ import me.halin.testapp.ModuleLoader.ConfigField;
 import me.halin.testapp.ModuleLoader.InitializableInterface;
 
 /**
- * Created by 17track on 3/28/16.
+ * Created by Halin on 3/28/16.
  */
 public class FirstDemoModuleConfiguration implements InitializableInterface {
     @ConfigField("firstParam")

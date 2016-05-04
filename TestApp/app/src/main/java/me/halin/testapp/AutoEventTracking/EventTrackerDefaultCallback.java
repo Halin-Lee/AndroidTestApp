@@ -3,7 +3,7 @@ package me.halin.testapp.AutoEventTracking;
 import me.halin.fundamental.LogUtil.Logger;
 
 /**
- * Created by 17track on 4/7/16.
+ * Created by Halin on 4/7/16.
  */
 public class EventTrackerDefaultCallback implements EventTrackerCallback {
     @Override
