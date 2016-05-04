@@ -53,8 +53,5 @@ public class MainActivity extends AppCompatActivity implements MainDataHolder.It
         startActivity(intent);
     }
 
-    public static void test(){
-        Log.e(TAG,"test");
 
-    }
 }

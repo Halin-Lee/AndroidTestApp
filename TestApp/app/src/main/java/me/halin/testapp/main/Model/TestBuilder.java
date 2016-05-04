@@ -3,9 +3,11 @@ package me.halin.testapp.main.Model;
 import java.util.ArrayList;
 import java.util.List;
 
+import me.halin.testapp.Account.AccountDemoActivity;
 import me.halin.testapp.AutoEventTracking.Demo.AutoEventTrackingDemoActivity;
 import me.halin.testapp.AutoEventTracking.Demo.AutoEventTrackingFragmentDemoActivity;
-import me.halin.testapp.AutoEventTracking.Demo.AutoEventTrackingFragmentDemoFragment;
+import me.halin.testapp.EspressonTestDemo.espresso.example.EspressoTestActivity;
+import me.halin.testapp.RecycleView.Base.RecycleViewBaseActivity;
 import me.halin.testapp.databinding.AdvancedBinding.DataBindingAdvancedBindingActivity;
 import me.halin.testapp.databinding.AttributeSetter.DataBindingAttributeSetterActivity;
 import me.halin.testapp.databinding.Base.DataBindingBaseActivity;
@@ -21,9 +23,6 @@ import me.halin.testapp.databinding.Import.DataBindingImportActivity;
 import me.halin.testapp.databinding.Include.DataBindingIncludeActivity;
 import me.halin.testapp.databinding.List.DataBindingListActivity;
 import me.halin.testapp.databinding.Observable.DataBindingObservableActivity;
-
-import me.halin.testapp.RecycleView.Base.RecycleViewBaseActivity;
-import me.halin.testapp.EspressonTestDemo.espresso.example.EspressoTestActivity;
 
 /**
  * /**
@@ -67,6 +66,10 @@ public class TestBuilder {
         String autoEventTracking = "自动化埋点";
         add(autoEventTracking, "自动化埋点", AutoEventTrackingDemoActivity.class);
         add(autoEventTracking, "自动化埋点,Fragment", AutoEventTrackingFragmentDemoActivity.class);
+
+        //account测试
+        String accountTest = "account测试";
+        add(accountTest, accountTest, AccountDemoActivity.class);
 
 
         return testList;

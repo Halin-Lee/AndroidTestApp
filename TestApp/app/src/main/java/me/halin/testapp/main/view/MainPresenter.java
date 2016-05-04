@@ -12,12 +12,11 @@ import me.halin.testapp.main.MainDataHolder;
 
 
 /**
- *
  * 做数据绑定工作
- *
+ * <p/>
  * Created by halin on 8/15/15.
  */
-public class MainPresenter extends BasePresenter  {
+public class MainPresenter extends BasePresenter {
 
     private MainDataHolder mDataHolder;
     private RecyclerView mRecyclerView;

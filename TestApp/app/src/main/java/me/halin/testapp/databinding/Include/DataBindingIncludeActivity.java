@@ -17,7 +17,8 @@ public class DataBindingIncludeActivity extends Activity {
         super.onCreate(savedInstanceState);
         //通过DataBinding设置ContentView,并得到绑定模型
         ActivityDataBindingIncludeBinding dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_data_binding_include);
-        dataBinding.setString("Here is a string from DataBindingIncludeActivity");
+//        通过主layout和subLayout共享实现binding
+//        dataBinding.setString("Here is a string from DataBindingIncludeActivity");
 //        setContentView(R.layout.activity_data_binding_include_sub);
     }
 }

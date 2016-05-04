@@ -1,6 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="me.halin.testapp">
 
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+
     <application
         android:name=".main.AppApplication"
         android:allowBackup="true"
@@ -110,6 +113,14 @@
         <activity
             android:name=".AutoEventTracking.Demo.AutoEventTrackingFragmentDemoActivity"
             android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".IncludeCustomView.IncludeCustomViewActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Account.AccountDemoActivity"
+            android:theme="@style/AppTheme" />
+
 
         <!-- 可搜索内容-->
         <!--<provider-->
