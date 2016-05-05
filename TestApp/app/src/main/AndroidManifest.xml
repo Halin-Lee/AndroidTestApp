@@ -40,64 +40,64 @@
 
         <!-- dataBinding测试Activity-->
         <activity
-            android:name="me.halin.testapp.databinding.Base.DataBindingBaseActivity"
+            android:name=".databinding.Base.DataBindingBaseActivity"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name="me.halin.testapp.databinding.List.DataBindingListActivity"
+            android:name=".databinding.List.DataBindingListActivity"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name="me.halin.testapp.databinding.Event.DataBindingEventActivity"
+            android:name=".databinding.Event.DataBindingEventActivity"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name="me.halin.testapp.databinding.Import.DataBindingImportActivity"
+            android:name=".databinding.Import.DataBindingImportActivity"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name="me.halin.testapp.databinding.Custom.DataBindingCustomActivity"
+            android:name=".databinding.Custom.DataBindingCustomActivity"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name="me.halin.testapp.databinding.Include.DataBindingIncludeActivity"
+            android:name=".databinding.Include.DataBindingIncludeActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="me.halin.testapp.databinding.Expression.DataBindingExpressionActivity"
-            android:theme="@style/AppTheme" />
-
-        <activity
-            android:name="me.halin.testapp.databinding.DataObjects.DataBindingObservableObjectActivity"
+            android:name=".databinding.Expression.DataBindingExpressionActivity"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name="me.halin.testapp.databinding.DataObjects.DataBindingObservableFieldActivity"
+            android:name=".databinding.DataObjects.DataBindingObservableObjectActivity"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name="me.halin.testapp.databinding.DataObjects.DataBindingObservableCollectionActivity"
+            android:name=".databinding.DataObjects.DataBindingObservableFieldActivity"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name="me.halin.testapp.databinding.GeneratedBinding.DataBindingGeneratedBindingActivity"
+            android:name=".databinding.DataObjects.DataBindingObservableCollectionActivity"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name="me.halin.testapp.databinding.AdvancedBinding.DataBindingAdvancedBindingActivity"
+            android:name=".databinding.GeneratedBinding.DataBindingGeneratedBindingActivity"
             android:theme="@style/AppTheme" />
 
         <activity
-            android:name="me.halin.testapp.databinding.DemoList.DataBindingDemoListActivity"
+            android:name=".databinding.AdvancedBinding.DataBindingAdvancedBindingActivity"
             android:theme="@style/AppTheme" />
 
-        <activity android:name="me.halin.testapp.databinding.Observable.DataBindingObservableActivity" />
+        <activity
+            android:name=".databinding.DemoList.DataBindingDemoListActivity"
+            android:theme="@style/AppTheme" />
 
-        <activity android:name="me.halin.testapp.databinding.AttributeSetter.DataBindingAttributeSetterActivity" />
+        <activity android:name=".databinding.Observable.DataBindingObservableActivity" />
+
+        <activity android:name=".databinding.AttributeSetter.DataBindingAttributeSetterActivity" />
 
 
         <!-- recycleView测试Activity-->
         <activity
-            android:name="me.halin.testapp.RecycleView.Base.RecycleViewBaseActivity"
+            android:name=".RecycleView.Base.RecycleViewBaseActivity"
             android:theme="@style/AppTheme" />
 
 
@@ -114,13 +114,33 @@
             android:name=".AutoEventTracking.Demo.AutoEventTrackingFragmentDemoActivity"
             android:theme="@style/AppTheme" />
 
-        <activity
-            android:name=".IncludeCustomView.IncludeCustomViewActivity"
-            android:theme="@style/AppTheme" />
+        <!-- 原生第三方登录授权-->
         <activity
             android:name=".Account.AccountDemoActivity"
             android:theme="@style/AppTheme" />
 
+        <!--Dagger2测试-->
+        <activity
+            android:name=".Dagger2.Base.DaggerBaseActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".Dagger2.InjectMethod.DaggerMethodInjectActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".Dagger2.Dependencies.DaggerDependenciesActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".Dagger2.AutoGenerate.DaggerAutoGenerateActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Dagger2.Named.DaggerNamedActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Dagger2.Singleton.DaggerSingletonActivity"
+            android:theme="@style/AppTheme" />
 
         <!-- 可搜索内容-->
         <!--<provider-->

@@ -27,6 +27,8 @@ import me.halin.testapp.R;
 
 
 /**
+ * 原生第三方登录授权
+ *
  * Created by Halin on 4/19/16.
  */
 public class AccountDemoActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {

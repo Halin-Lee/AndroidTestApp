@@ -1,4 +1,6 @@
-package me.halin.testapp.main.Model;
+package me.halin.testapp.databinding;
+
+import android.databinding.DataBindingComponent;
 
 import dagger.Component;
 
