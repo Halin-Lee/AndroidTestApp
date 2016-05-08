@@ -141,6 +141,12 @@
         <activity
             android:name=".Dagger2.Singleton.DaggerSingletonActivity"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Dagger2.StaticInject.DaggerStaticInjectActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Dagger2.InnerClass.DaggerInnerClassActivity"
+            android:theme="@style/AppTheme" />
 
         <!-- 可搜索内容-->
         <!--<provider-->

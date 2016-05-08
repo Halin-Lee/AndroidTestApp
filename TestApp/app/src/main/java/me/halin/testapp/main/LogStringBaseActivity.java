@@ -1,9 +1,11 @@
-package me.halin.testapp.Dagger2;
+package me.halin.testapp.main;
 
 import android.os.Bundle;
+import android.os.PersistableBundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import java.util.Locale;
@@ -13,10 +15,10 @@ import me.halin.testapp.R;
 
 /**
  * 实现日志显示的Activity
- * <p/>
+ * <p>
  * Created by Halin on 5/5/16.
  */
-public class Dagger2BaseActivity extends AppCompatActivity {
+public class LogStringBaseActivity extends AppCompatActivity {
 
     private TextView textView;
 
@@ -35,6 +37,15 @@ public class Dagger2BaseActivity extends AppCompatActivity {
         String formatStr = String.format(Locale.ENGLISH, format, args);
         textView.append(formatStr + "\n");
         Logger.debug(formatStr);
+    }
 
+    @Override
+    public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) {
+        super.onSaveInstanceState(outState, outPersistentState);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
     }
 }

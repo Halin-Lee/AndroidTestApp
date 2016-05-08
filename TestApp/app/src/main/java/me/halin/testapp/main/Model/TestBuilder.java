@@ -10,8 +10,10 @@ import me.halin.testapp.Dagger2.AutoGenerate.DaggerAutoGenerateActivity;
 import me.halin.testapp.Dagger2.Base.DaggerBaseActivity;
 import me.halin.testapp.Dagger2.Dependencies.DaggerDependenciesActivity;
 import me.halin.testapp.Dagger2.InjectMethod.DaggerMethodInjectActivity;
+import me.halin.testapp.Dagger2.InnerClass.DaggerInnerClassActivity;
 import me.halin.testapp.Dagger2.Named.DaggerNamedActivity;
 import me.halin.testapp.Dagger2.Singleton.DaggerSingletonActivity;
+import me.halin.testapp.Dagger2.StaticInject.DaggerStaticInjectActivity;
 import me.halin.testapp.EspressonTestDemo.espresso.example.EspressoTestActivity;
 import me.halin.testapp.RecycleView.Base.RecycleViewBaseActivity;
 import me.halin.testapp.databinding.AdvancedBinding.DataBindingAdvancedBindingActivity;
@@ -85,6 +87,8 @@ public class TestBuilder {
         add(dagger2Test, "Component自动生成Module", DaggerAutoGenerateActivity.class);
         add(dagger2Test, "Named注解使用", DaggerNamedActivity.class);
         add(dagger2Test, "Singleton注解使用", DaggerSingletonActivity.class);
+        add(dagger2Test, "静态注入", DaggerStaticInjectActivity.class);
+        add(dagger2Test, "内部类注入", DaggerInnerClassActivity.class);
 
 
         return testList;

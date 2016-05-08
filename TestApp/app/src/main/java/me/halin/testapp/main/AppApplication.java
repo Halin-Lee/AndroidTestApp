@@ -22,7 +22,7 @@ public class AppApplication extends android.app.Application {
 
         instance = this;
 
-        Logger.setup(new LogUtilTestIn(this), true);
+//        Logger.setup(new LogUtilTestIn(this), true);
 
 //        XStreamDemo.test(this);
 //        ModuleLoader.getInstance().loadModule(this, GlobalConfiguration.getInstance(), DemoModuleDeclaration.class, "AppEnvironmentConfig.xml", null);

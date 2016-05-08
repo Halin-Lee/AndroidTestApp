@@ -10,7 +10,8 @@ import dagger.Provides;
 public class DependenciesModule {
 
     @Provides
-    public String moduleString() {
-        return this.getClass().getName();
+    //依赖于SubModule提供的integer
+    public String moduleString(int subModuleInteger) {
+        return this.getClass().getName() + " subModuleInteger:" + subModuleInteger;
     }
 }

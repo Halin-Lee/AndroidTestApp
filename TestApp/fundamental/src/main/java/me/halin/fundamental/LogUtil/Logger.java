@@ -4,6 +4,8 @@ import android.util.Log;
 
 import java.util.Locale;
 
+import javax.inject.Inject;
+
 /**
  * @Title: Logger
  * @Copyright: © Copyright 2010-2015 17track Rights Reserved
@@ -54,7 +56,7 @@ public class Logger {
         return mInstance.isDebug;
     }
 
-    private static boolean isDebug;
+    private boolean isDebug;
 
     public static void setup(LogUtil logUtil, boolean isDebug) {
         mInstance.logUtil = logUtil;
@@ -86,7 +88,7 @@ public class Logger {
             formatStr = String.format(Locale.ENGLISH, format, args);
         }
         String logStr = String.format(Locale.ENGLISH, "%s |  %s", tag, formatStr);
-        if (isDebug) {
+        if (mInstance.isDebug) {
             Log.i(LOG, logStr);
         }
         mInstance.logUtil.log(logStr);
@@ -105,7 +107,7 @@ public class Logger {
         } else {
             formatStr = String.format(Locale.ENGLISH, format, args);
         }
-        if (isDebug) {
+        if (mInstance.isDebug) {
             Log.e(tag, formatStr);
         }
 
@@ -120,7 +122,7 @@ public class Logger {
      * @param value 值
      */
     public static void trackDimension(int index, String value) {
-        if (isDebug) {
+        if (mInstance.isDebug) {
             Log.i(LOG, "上传维度 :" + index + " ,数值:" + value);
         }
         if (mInstance.logUtil instanceof MeasuringUtil) {
@@ -136,7 +138,7 @@ public class Logger {
      * @param value 值
      */
     public static void trackMetric(int index, float value) {
-        if (isDebug) {
+        if (mInstance.isDebug) {
             Log.d(LOG, "上传指标 :" + index + " ,数值:" + value);
         }
         if (mInstance.logUtil instanceof MeasuringUtil) {
@@ -154,7 +156,7 @@ public class Logger {
      * @param value    值
      */
     public static void trackEvent(String category, String action, String label, long value) {
-        if (isDebug) {
+        if (mInstance.isDebug) {
             String logStr = String.format(Locale.ENGLISH, "上传事件 类别:%s 事件:%s 标签:%s 数值%d", category, action, label, value);
             Log.d(LOG, logStr);
         }
@@ -175,7 +177,7 @@ public class Logger {
      */
     public static void trackTiming(String category, String variable, String label, long timeConsuming) {
 
-        if (isDebug) {
+        if (mInstance.isDebug) {
             String logStr = String.format(Locale.ENGLISH, "统计耗时 类别:%s 事件:%s 标签:%s  时间:%d毫秒", category, variable, label, timeConsuming);
             Log.d(LOG, logStr);
         }
