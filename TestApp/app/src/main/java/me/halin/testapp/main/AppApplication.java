@@ -2,6 +2,7 @@ package me.halin.testapp.main;
 
 import me.halin.fundamental.LogUtil.LogUtilTestIn;
 import me.halin.fundamental.LogUtil.Logger;
+import me.halin.testapp.UserCenter.SignInRequest;
 
 /**
  * Created by halin on 11/24/15.

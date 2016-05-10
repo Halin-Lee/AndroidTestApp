@@ -8,12 +8,12 @@ import javax.inject.Inject;
 import dagger.Component;
 import dagger.Module;
 import dagger.Provides;
-import me.halin.testapp.Dagger2.Dagger2BaseActivity;
+import me.halin.testapp.main.LogStringBaseActivity;
 
 /**
  * Created by Halin on 5/6/16.
  */
-public class DaggerInnerClassActivity extends Dagger2BaseActivity {
+public class DaggerInnerClassActivity extends LogStringBaseActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

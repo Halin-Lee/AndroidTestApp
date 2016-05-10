@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import me.halin.testapp.UserCenter.SignInRequest;
 import me.halin.testapp.main.Model.TestBuilder;
 import me.halin.testapp.main.Model.TestItem;
 import me.halin.testapp.main.view.MainPresenter;
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements MainDataHolder.It
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        SignInRequest.test();
 
         final MainDataHolder dataHolder = new MainDataHolder();
         dataHolder.itemClickListener.set(this);

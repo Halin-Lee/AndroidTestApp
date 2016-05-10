@@ -148,6 +148,12 @@
             android:name=".Dagger2.InnerClass.DaggerInnerClassActivity"
             android:theme="@style/AppTheme" />
 
+        <activity
+            android:name=".FragmentDemo.FragmentTestActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".RequestSimulator.RequestSimulatorActivity"
+            android:theme="@style/AppTheme" />
         <!-- 可搜索内容-->
         <!--<provider-->
         <!--android:name="me.halin.testapp.SearchableActivity.SearchableProvider"-->

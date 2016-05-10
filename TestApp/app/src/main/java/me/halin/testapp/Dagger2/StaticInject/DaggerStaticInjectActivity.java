@@ -5,12 +5,12 @@ import android.support.annotation.Nullable;
 
 import javax.inject.Inject;
 
-import me.halin.testapp.Dagger2.Dagger2BaseActivity;
+import me.halin.testapp.main.LogStringBaseActivity;
 
 /**
  * Created by Halin on 5/6/16.
  */
-public class DaggerStaticInjectActivity extends Dagger2BaseActivity {
+public class DaggerStaticInjectActivity extends LogStringBaseActivity {
 
     @Inject
     public static String staticField;

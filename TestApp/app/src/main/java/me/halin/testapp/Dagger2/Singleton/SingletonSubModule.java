@@ -2,8 +2,7 @@ package me.halin.testapp.Dagger2.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import me.halin.fundamental.LogUtil.Logger;
-import me.halin.testapp.Dagger2.Dagger2BaseActivity;
+import me.halin.testapp.main.LogStringBaseActivity;
 
 /**
  * Created by Halin on 5/5/16.
@@ -12,9 +11,9 @@ import me.halin.testapp.Dagger2.Dagger2BaseActivity;
 public class SingletonSubModule {
 
 
-    private Dagger2BaseActivity activity;
+    private LogStringBaseActivity activity;
 
-    SingletonSubModule(Dagger2BaseActivity activity) {
+    SingletonSubModule(LogStringBaseActivity activity) {
         this.activity = activity;
     }
 

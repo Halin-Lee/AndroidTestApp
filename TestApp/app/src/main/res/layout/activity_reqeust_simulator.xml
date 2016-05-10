@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".RequestSimulator.RequestSimulatorActivity">
+    <!-- 定义绑定器的类-->
+    <data class=".RequestSimulatorBinding">
+        <!-- 定义绑定器的参数 @param name 名称 @param type 对应的类-->
+        <variable
+            name="url"
+            type="String" />
+
+        <variable
+            name="method"
+            type="int" />
+
+        <variable
+            name="trustAnyCertificate"
+            type="boolean" />
+
+        <variable
+            name="param"
+            type="String" />
+
+        <variable
+            name="result"
+            type="String" />
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请求连接:" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={url}" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="请求类型" />
+
+            <CheckBox
+                android:id="@+id/get_check_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="@{method==0}"
+                android:onClick="methodClick"
+                android:text="Get" />
+
+            <CheckBox
+
+                android:id="@+id/post_check_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="@{method==1}"
+                android:onClick="methodClick"
+                android:text="Post" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center_vertical"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="@{trustAnyCertificate}"
+                android:text="信任所有证书" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请求参数" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={param}" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="submit"
+            android:text="发送请求" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@{result}" />
+    </LinearLayout>
+</layout>

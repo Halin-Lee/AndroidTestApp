@@ -8,12 +8,12 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 import me.halin.fundamental.LogUtil.Logger;
-import me.halin.testapp.Dagger2.Dagger2BaseActivity;
+import me.halin.testapp.main.LogStringBaseActivity;
 
 /**
  * Created by Halin on 5/4/16.
  */
-public class DaggerSingletonActivity extends Dagger2BaseActivity {
+public class DaggerSingletonActivity extends LogStringBaseActivity {
     @Inject
     @Named("singleton")
     //类名与注入无直接关系

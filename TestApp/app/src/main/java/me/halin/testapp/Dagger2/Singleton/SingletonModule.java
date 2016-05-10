@@ -6,7 +6,7 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 import me.halin.fundamental.LogUtil.Logger;
-import me.halin.testapp.Dagger2.Dagger2BaseActivity;
+import me.halin.testapp.main.LogStringBaseActivity;
 
 /**
  * Created by Halin on 5/4/16.
@@ -14,9 +14,9 @@ import me.halin.testapp.Dagger2.Dagger2BaseActivity;
 @Module
 public class SingletonModule {
 
-    private Dagger2BaseActivity activity;
+    private LogStringBaseActivity activity;
 
-    SingletonModule(Dagger2BaseActivity activity) {
+    SingletonModule(LogStringBaseActivity activity) {
         this.activity = activity;
     }
 

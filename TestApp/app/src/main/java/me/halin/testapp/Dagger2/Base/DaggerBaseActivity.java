@@ -8,12 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 import javax.inject.Inject;
 
 import me.halin.fundamental.LogUtil.Logger;
-import me.halin.testapp.Dagger2.Dagger2BaseActivity;
+import me.halin.testapp.main.LogStringBaseActivity;
 
 /**
  * Created by 17track on 4/8/16.
  */
-public class DaggerBaseActivity extends Dagger2BaseActivity {
+public class DaggerBaseActivity extends LogStringBaseActivity {
 
     /**
      * @Inject 声明被注入的对象

@@ -7,14 +7,14 @@ import android.support.v7.app.AppCompatActivity;
 import javax.inject.Inject;
 
 import me.halin.fundamental.LogUtil.Logger;
-import me.halin.testapp.Dagger2.Dagger2BaseActivity;
+import me.halin.testapp.main.LogStringBaseActivity;
 
 /**
  * Dagger Component依赖Component的测试
  * <p/>
  * Created by Halin on 5/4/16.
  */
-public class DaggerDependenciesActivity extends Dagger2BaseActivity {
+public class DaggerDependenciesActivity extends LogStringBaseActivity {
 
 
     @Inject

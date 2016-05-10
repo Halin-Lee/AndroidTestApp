@@ -15,7 +15,9 @@ import me.halin.testapp.Dagger2.Named.DaggerNamedActivity;
 import me.halin.testapp.Dagger2.Singleton.DaggerSingletonActivity;
 import me.halin.testapp.Dagger2.StaticInject.DaggerStaticInjectActivity;
 import me.halin.testapp.EspressonTestDemo.espresso.example.EspressoTestActivity;
+import me.halin.testapp.FragmentDemo.FragmentTestActivity;
 import me.halin.testapp.RecycleView.Base.RecycleViewBaseActivity;
+import me.halin.testapp.RequestSimulator.RequestSimulatorActivity;
 import me.halin.testapp.databinding.AdvancedBinding.DataBindingAdvancedBindingActivity;
 import me.halin.testapp.databinding.AttributeSetter.DataBindingAttributeSetterActivity;
 import me.halin.testapp.databinding.Base.DataBindingBaseActivity;
@@ -90,6 +92,11 @@ public class TestBuilder {
         add(dagger2Test, "静态注入", DaggerStaticInjectActivity.class);
         add(dagger2Test, "内部类注入", DaggerInnerClassActivity.class);
 
+        String fragmentTest = "Fragment 测试";
+        add(fragmentTest, fragmentTest, FragmentTestActivity.class);
+
+        String requestSimulatorTest = "请求模拟";
+        add(requestSimulatorTest, requestSimulatorTest, RequestSimulatorActivity.class);
 
         return testList;
     }

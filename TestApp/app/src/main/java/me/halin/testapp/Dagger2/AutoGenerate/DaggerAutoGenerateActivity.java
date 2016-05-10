@@ -2,17 +2,16 @@ package me.halin.testapp.Dagger2.AutoGenerate;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 
 import javax.inject.Inject;
 
-import me.halin.fundamental.LogUtil.Logger;
-import me.halin.testapp.Dagger2.Dagger2BaseActivity;
+import me.halin.testapp.main.LogStringBaseActivity;
+
 
 /**
  * Created by Halin on 5/5/16.
  */
-public class DaggerAutoGenerateActivity extends Dagger2BaseActivity {
+public class DaggerAutoGenerateActivity extends LogStringBaseActivity {
 
     @Inject
     long currentTime;
