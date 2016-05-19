@@ -15,10 +15,19 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.CookieHandler;
 import java.net.CookieManager;
+import java.net.HttpCookie;
 import java.net.HttpURLConnection;
+import java.net.URI;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import me.halin.fundamental.LogUtil.Logger;
 import me.halin.fundamental.NetworkCommunication.HLStringRequest;
@@ -39,7 +48,7 @@ public class RequestSimulatorActivity extends AppCompatActivity implements Respo
     /**
      * 默认URL
      */
-    public static final String DEFAULT_URL = "https://userapi.17track.net/api/user/setcookie";
+    public static final String DEFAULT_URL = "http://userapi.17track.net/api/user/setcookie";
     /**
      * 默认方法
      */
@@ -139,6 +148,37 @@ public class RequestSimulatorActivity extends AppCompatActivity implements Respo
     @Override
     public void onResponse(String response) {
         requestSimulatorBinding.setResult("请求成功 Header:" + stringRequest.getResponseHeader() + ",result:" + response);
+
+
+        Map<String, String> headers = stringRequest.getResponseHeader();
+        for (String key : headers.keySet()) {
+            if (key.equalsIgnoreCase("Set-Cookie")) {
+                String cookie = headers.get(key);
+                if (cookie.length() > 0) {
+                    String[] splitCookie = cookie.split(";");
+                    if (splitCookie.length != 0) {
+
+                        String[] splitSessionId = splitCookie[0].split("=");
+                        if (splitSessionId.length == 2) {
+                            String cookieKey = splitSessionId[0];
+                            String cookieValue = splitSessionId[1];
+                            Logger.debug("Cookie:" + cookieValue);
+                        }
+
+                    }
+                }
+            }
+        }
         stringRequest = null;
+
+
+        CookieManager cookieManager = (CookieManager) CookieHandler.getDefault();
+
+        List<HttpCookie> cookiesFromUserApi = cookieManager.getCookieStore().get(URI.create("https://userapi.17track.net"));
+        if (cookiesFromUserApi != null && cookiesFromUserApi.size() != 0) {
+            Logger.debug("Cookies From Cookies Manager:" + cookiesFromUserApi.get(0));
+        }
+
+
     }
 }

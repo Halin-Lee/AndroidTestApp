@@ -31,21 +31,22 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.3.0'
-    compile 'com.android.support:recyclerview-v7:23.3.0'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
 
     //facebook rebound框架学习
     compile 'com.facebook.rebound:rebound:0.3.8'
-
-
 
     //测试框架
     //JUnit下使用mockito时的配置
     testCompile 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-core:1.10.19'
 
+    //robolectric
+    testCompile "org.robolectric:robolectric:3.0"
+
     //AndroidInstrumentation测试配置
-    androidTestCompile 'com.android.support:support-annotations:23.3.0'
+    androidTestCompile 'com.android.support:support-annotations:23.4.0'
     androidTestCompile 'com.android.support.test:runner:0.4.1'
     androidTestCompile 'com.android.support.test:rules:0.4.1'
     androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'  //UI测试框架
@@ -60,11 +61,8 @@ dependencies {
 
     compile project(':fundamental')
 
-
-
-
     //xstream
-    compile ('com.thoughtworks.xstream:xstream:1.4.7') {
+    compile('com.thoughtworks.xstream:xstream:1.4.7') {
         exclude group: 'xmlpull', module: 'xmlpull'
     }
 
@@ -72,5 +70,7 @@ dependencies {
     apt 'com.google.dagger:dagger-compiler:2.0'
     compile 'com.google.dagger:dagger:2.0'
     compile 'javax.annotation:jsr250-api:1.0'
+
+
 
 }
