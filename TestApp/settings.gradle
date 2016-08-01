@@ -1,1 +1,1 @@
-include ':app', ':daggerstudy', ':fundamental', ':im', ':xmppdemo'
+include ':app', ':daggerstudy', ':fundamental', ':im', ':xmppdemo', ':greendaogenerator'

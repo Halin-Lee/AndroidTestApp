@@ -2,6 +2,7 @@ package me.halin.testapp.Splash;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -19,7 +20,6 @@ public class SplashActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         Intent mainIntent = new Intent(this, MainActivity.class);
 //        Intent dataBindingIntent = new Intent(this, DataBindingBaseActivity.class);
 //        Intent[] intents = new Intent[]{mainIntent, dataBindingIntent};
@@ -29,6 +29,7 @@ public class SplashActivity extends Activity {
 //        startActivity(dataBindingIntent);
         this.finish();
 
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
 
 
