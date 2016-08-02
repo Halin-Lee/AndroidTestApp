@@ -19,6 +19,7 @@ import me.halin.testapp.FragmentDemo.FragmentTestActivity;
 import me.halin.testapp.MonkeyRunner.MonkeyRunnerDemoActivity;
 import me.halin.testapp.RecycleView.Base.RecycleViewBaseActivity;
 import me.halin.testapp.RequestSimulator.RequestSimulatorActivity;
+import me.halin.testapp.WebSocket.WebSocketDemoActivity;
 import me.halin.testapp.databinding.AdvancedBinding.DataBindingAdvancedBindingActivity;
 import me.halin.testapp.databinding.AttributeSetter.DataBindingAttributeSetterActivity;
 import me.halin.testapp.databinding.Base.DataBindingBaseActivity;
@@ -38,7 +39,7 @@ import me.halin.testapp.databinding.Observable.DataBindingObservableActivity;
 /**
  * /**
  * 测试参数构造
- * <p>
+ * <p/>
  * Created by halin on 9/17/15.
  */
 public class TestBuilder {
@@ -102,36 +103,13 @@ public class TestBuilder {
         String monkeyRunnerTest = "monkeyRunnerTest测试";
         add(monkeyRunnerTest, monkeyRunnerTest, MonkeyRunnerDemoActivity.class);
 
-        return testList;
-    }
-
-
-    public List<TestItem> build2() {
-
-        //DataBinding;
-        String dataBindingTestGroupName = "DataBinding测试";
-        add(dataBindingTestGroupName, "DataBinder测试", DataBindingBaseActivity.class);
-        add(dataBindingTestGroupName, "DataBinderList测试", DataBindingListActivity.class);
-        add(dataBindingTestGroupName, "DataBinder事件绑定测试", DataBindingEventActivity.class);
-        add(dataBindingTestGroupName, "DataBinder导入测试", DataBindingImportActivity.class);
-        add(dataBindingTestGroupName, "自定义DataBinder", DataBindingCustomActivity.class);
-        add(dataBindingTestGroupName, "Include测试", DataBindingIncludeActivity.class);
-        add(dataBindingTestGroupName, "Expression测试", DataBindingExpressionActivity.class);
-        add(dataBindingTestGroupName, "ObservableObject测试", DataBindingObservableObjectActivity.class);
-        add(dataBindingTestGroupName, "ObservableField测试", DataBindingObservableFieldActivity.class);
-        add(dataBindingTestGroupName, "ObservableCollection测试", DataBindingObservableCollectionActivity.class);
-        add(dataBindingTestGroupName, "GeneratedBinding绑定测试", DataBindingGeneratedBindingActivity.class);
-        add(dataBindingTestGroupName, "AdvancedBinding动态绑定测试", DataBindingAdvancedBindingActivity.class);
-        add(dataBindingTestGroupName, "DataBinding Demo", DataBindingDemoListActivity.class);
-        add(dataBindingTestGroupName, "Observable测试", DataBindingObservableActivity.class);
-
-        //recycleView
-        String recycleViewTestGroupName = "RecycleView测试";
-        add(recycleViewTestGroupName, "RecycleViewBase测试", RecycleViewBaseActivity.class);
-
+        //webSocket
+        String webSocketTestGroupName = "WebSocket测试";
+        add(webSocketTestGroupName, "WebSocket测试", WebSocketDemoActivity.class);
 
         return testList;
     }
+
 
     protected void add(String groupName, String testName, Class clazz) {
         TestItem testItem = new TestItem(groupName, testName, clazz);

@@ -14,14 +14,15 @@ import me.halin.fundamental.LogUtil.Logger;
 
 /**
  * 信任所有的HurlStack,用于服务器证书未升级导致无法使用HTTPS连接,仅限测试用,注意检查
- * <p/>
+ * <p>
  * Created by Halin on 5/10/16.
  */
 public class TrustAnyCertificateHurlStack extends RedirectHandleHurlStack {
 
     public static final String TAG = TrustAllTrustManager.class.getName();
 
-    public static TrustAnyCertificateHurlStack getInstance() {
+
+    private static SSLSocketFactory getTrustAnyFactory() {
         SSLContext sc = null;
         try {
             sc = SSLContext.getInstance("TLS");
@@ -29,12 +30,15 @@ public class TrustAnyCertificateHurlStack extends RedirectHandleHurlStack {
         } catch (NoSuchAlgorithmException | KeyManagementException e) {
             Logger.logE(TAG, "SSL加载失败,Error:%s", e);
         }
-        return new TrustAnyCertificateHurlStack(null, sc != null ? sc.getSocketFactory() : null);
-
+        return sc != null ? sc.getSocketFactory() : null;
     }
 
-    public TrustAnyCertificateHurlStack(UrlRewriter urlRewriter, SSLSocketFactory sslSocketFactory) {
-        super(urlRewriter, sslSocketFactory);
+    public TrustAnyCertificateHurlStack() {
+        this(null);
+    }
+
+    public TrustAnyCertificateHurlStack(UrlRewriter urlRewriter) {
+        super(urlRewriter, getTrustAnyFactory());
     }
 
     private static class TrustAllTrustManager implements X509TrustManager {

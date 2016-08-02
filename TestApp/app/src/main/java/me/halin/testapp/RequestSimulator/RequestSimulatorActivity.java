@@ -24,7 +24,10 @@ import java.net.CookieHandler;
 import java.net.CookieManager;
 import java.net.HttpCookie;
 import java.net.HttpURLConnection;
+import java.net.InetSocketAddress;
+import java.net.Proxy;
 import java.net.URI;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -77,6 +80,10 @@ public class RequestSimulatorActivity extends AppCompatActivity implements Respo
      */
     private HLStringRequest stringRequest;
 
+    private boolean usingProxy;
+
+    private Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("192.168.1.31", 3128));
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,8 +100,27 @@ public class RequestSimulatorActivity extends AppCompatActivity implements Respo
         //自行处理重定向
         HttpURLConnection.setFollowRedirects(false);
 
-        normalRequestQueue = Volley.newRequestQueue(this, new RedirectHandleHurlStack());
-        trustAnyRequestQueue = Volley.newRequestQueue(this, TrustAnyCertificateHurlStack.getInstance());
+        normalRequestQueue = Volley.newRequestQueue(this, new RedirectHandleHurlStack() {
+            @Override
+            protected HttpURLConnection createConnection(URL url) throws IOException {
+                if (requestSimulatorBinding.getUsingProxy()) {
+                    return (HttpURLConnection) url.openConnection(proxy);
+                } else {
+                    return (HttpURLConnection) url.openConnection();
+                }
+            }
+        });
+
+        trustAnyRequestQueue = Volley.newRequestQueue(this, new TrustAnyCertificateHurlStack() {
+            @Override
+            protected HttpURLConnection createConnection(URL url) throws IOException {
+                if (requestSimulatorBinding.getUsingProxy()) {
+                    return (HttpURLConnection) url.openConnection(proxy);
+                } else {
+                    return (HttpURLConnection) url.openConnection();
+                }
+            }
+        });
     }
 
 

@@ -41,18 +41,6 @@ public class MainActivity extends AppCompatActivity implements MainDataHolder.It
         new MainPresenter(this, dataHolder).init();
 
 
-        //用于测试dataHolder数据改变对view的影响
-/*        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                List<TestItem> list = dataHolder.testList;
-                list.remove(list.size()-1);
-                Log.e(TAG,"Change");
-            }
-        },2000);*/
-
-
-
     }
 
     @Override

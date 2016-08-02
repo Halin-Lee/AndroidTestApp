@@ -18,7 +18,7 @@ import me.halin.fundamental.LogUtil.Logger;
 
 /**
  * 请求管理工具
- * <p/>
+ * <p>
  * Created by Halin on 5/10/16.
  */
 public class VolleyController {
@@ -61,7 +61,7 @@ public class VolleyController {
 
         //初始化Volley队列
         if (Logger.isDebug()) {
-            mRequestQueue = Volley.newRequestQueue(application, TrustAnyCertificateHurlStack.getInstance());
+            mRequestQueue = Volley.newRequestQueue(application, new TrustAnyCertificateHurlStack());
         } else {
             mRequestQueue = Volley.newRequestQueue(application, new RedirectHandleHurlStack());
         }

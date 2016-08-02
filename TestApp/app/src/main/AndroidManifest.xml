@@ -3,6 +3,7 @@
 
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".main.AppApplication"
@@ -156,6 +157,10 @@
 
         <activity
             android:name=".MonkeyRunner.MonkeyRunnerDemoActivity"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".WebSocket.WebSocketDemoActivity"
             android:theme="@style/AppTheme" />
 
         <!-- 可搜索内容-->

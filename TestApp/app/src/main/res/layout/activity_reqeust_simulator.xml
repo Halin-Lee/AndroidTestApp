@@ -19,6 +19,10 @@
             type="boolean" />
 
         <variable
+            name="usingProxy"
+            type="boolean" />
+
+        <variable
             name="param"
             type="String" />
 
@@ -93,9 +97,14 @@
             <CheckBox
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="@{trustAnyCertificate}"
+                android:checked="@={trustAnyCertificate}"
                 android:text="信任所有证书" />
 
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="@={usingProxy}"
+                android:text="使用代理" />
 
         </LinearLayout>
 
