@@ -5,15 +5,28 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.os.Looper;
+import android.os.MessageQueue;
+import android.text.TextUtils;
+import android.util.Printer;
 import android.widget.Toast;
 
 import com.taobao.android.dexposed.DexposedBridge;
 import com.taobao.android.dexposed.XC_MethodHook;
 
+import java.util.Arrays;
+import java.util.UUID;
+
 import me.halin.fundamental.LogUtil.LogUtilTestIn;
 import me.halin.fundamental.LogUtil.Logger;
+import me.halin.fundamental.NetworkCommunication.VolleyController;
+import me.halin.fundamental.Tools.ApplicationContextTools;
+import me.halin.fundamental.Tools.ThreadTools;
+import me.halin.fundamental.Tools.WatchDogService;
+import me.halin.testapp.BuildConfig;
 import me.halin.testapp.UserCenter.SignInRequest;
 
 /**
@@ -33,6 +46,10 @@ public class AppApplication extends android.app.Application {
     public void onCreate() {
         super.onCreate();
 
+        initFundamental();
+
+        WatchDogService.getInstance().setup();
+
         if (DexposedBridge.canDexposed(this)) {
             DexposedBridge.findAndHookMethod(Activity.class, "onCreate", Bundle.class, new XC_MethodHook() {
                 @Override
@@ -44,12 +61,24 @@ public class AppApplication extends android.app.Application {
 
         }
 
+
         instance = this;
 
 //        Logger.setup(new LogUtilTestIn(this), true);
 
 //        XStreamDemo.test(this);
 //        ModuleLoader.getInstance().loadModule(this, GlobalConfiguration.getInstance(), DemoModuleDeclaration.class, "AppEnvironmentConfig.xml", null);
+
+
+    }
+
+    /**
+     * 初始化工具类
+     */
+    private void initFundamental() {
+
+        ApplicationContextTools.setup(this, BuildConfig.VERSION_NAME, BuildConfig.VERSION_CODE);
+        VolleyController.getInstance().setup(this);
 
 
     }
