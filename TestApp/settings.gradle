@@ -1,1 +1,24 @@
+import com.sun.codemodel.internal.fmt.JPropertyFile
+
+//定义一个名为initGradleEnvironment的函数。该函数内部完成一些初始化操作
+//比如创建特定的目录，设置特定的参数等
+def initGradleEnvironment(){
+    println"initialize Gradle Environment ....."
+
+    //从local.properties加载参数
+    Properties properties = new Properties()
+    File propertyFile = new File(rootDir.getAbsolutePath() + "/local.properties")
+    properties.load(propertyFile.newDataInputStream())
+    //gradle就是gradle对象。它默认是Settings和Project的成员变量。可直接获取
+    //ext前缀，表明操作的是外置属性。api是一个新的属性名。前面说过，只在
+    //第一次定义或者设置它的时候需要ext前缀
+    gradle.ext.api = properties.getProperty('sdk.api')
+    gradle.ext.demo = "abc"
+
+    println "initialize Gradle Environment completes..." + gradle.api  +" demo:" + gradle.demo//再次存取api的时候，就不需要ext前缀了
+
+}
+//settings.gradle加载的时候，会执行initGradleEnvironment
+initGradleEnvironment()
+
 include ':app', ':daggerstudy', ':fundamental', ':im', ':xmppdemo', ':greendaogenerator'

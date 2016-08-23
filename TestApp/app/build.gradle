@@ -1,5 +1,8 @@
 apply plugin: 'com.android.application'
 
+//utils.gradle
+apply from: rootProject.getRootDir().getAbsolutePath() + "/utils.gradle"
+
 //dagger2
 apply plugin: 'com.neenbedankt.android-apt'
 
@@ -26,6 +29,10 @@ android {
     dataBinding {
         enabled = true
     }
+    lintOptions {
+        abortOnError false
+    }
+
 }
 
 dependencies {
@@ -66,4 +73,32 @@ dependencies {
     compile 'org.greenrobot:greendao:2.2.1'
     //dexposed
     compile 'com.taobao.android:dexposed:0.1.1@aar'
+}
+
+//beforeProject{
+//
+//    println"before App Project."
+//
+//}
+//afterProject{
+//    println"after App Project."
+//
+//}
+
+tasks.getByName("build"){
+    it.doLast{
+        println "$project.name: After assemble, jar libs are copied tolocal repository"
+        //copyOutput(true)  //copyOutput是utils.gradle输出的closure
+    }
+}
+
+
+/*
+  因为我的项目只提供最终的release编译出来的Jar包给其他人，所以不需要编译debug版的东西
+  当Project创建完所有任务的有向图后，我通过afterEvaluate函数设置一个回调Closure。在这个回调
+  Closure里，我disable了所有Debug的Task
+*/
+project.afterEvaluate{
+    disableReleaseBuild()
+    disableTestBuild()
 }
