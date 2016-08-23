@@ -1,0 +1,47 @@
+//utils.gradle中定义了一个获取AndroidManifests.xmlversionName的函数
+def  getVersionNameAdvanced(){
+
+    defxmlFile = project.file("AndroidManifest.xml")
+    defrootManifest = new XmlSlurper().parse(xmlFile)
+    returnrootManifest['@android:versionName']
+}
+//现在，想把这个API输出到各个Project。由于这个utils.gradle会被每一个Project Apply，所以
+//我可以把getVersionNameAdvanced定义成一个closure，然后赋值到一个外部属性
+
+
+//对于android library编译，我会disable所有的debug编译任务
+def disableReleaseBuild(){
+    //project.tasks包含了所有的tasks，下面的findAll是寻找那些名字中带debug的Task。
+    //返回值保存到targetTasks容器中
+    def targetTasks = project.tasks.findAll{task ->
+        task.name.contains("Release")
+    }
+    //对满足条件的task，设置它为disable。如此这般，这个Task就不会被执行
+    targetTasks.each{
+        println"disable release task  :${it.name}"
+        it.setEnabled false
+    }
+}
+
+
+def disableTestBuild(){
+
+    def targetTasks = project.tasks.findAll{task ->
+        task.name.contains("Test")
+    }
+
+    targetTasks.each{
+        println"disable test task  :${it.name}"
+        it.setEnabled false
+    }
+}
+
+//将函数设置为extra属性中去，这样，加载utils.gradle的Project就能调用此文件中定义的函数了
+ext{
+//此段花括号中代码是闭包
+    //除了ext.xxx=value这种定义方法外，还可以使用ext{}这种书写方法。
+    //ext{}不是ext(Closure)对应的函数调用。但是ext{}中的{}确实是闭包。
+    getVersionNameAdvanced = this.&getVersionNameAdvanced
+    disableReleaseBuild = this.&disableReleaseBuild
+    disableTestBuild = this.&disableTestBuild
+}
