@@ -21,4 +21,4 @@ def initGradleEnvironment(){
 //settings.gradle加载的时候，会执行initGradleEnvironment
 initGradleEnvironment()
 
-include ':app', ':daggerstudy', ':fundamental', ':im', ':xmppdemo', ':greendaogenerator'
+include ':app', ':daggerstudy', ':fundamental', ':im', ':xmppdemo', ':greendaogenerator', ':jnitest'

@@ -32,10 +32,18 @@ android {
     lintOptions {
         abortOnError false
     }
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+            jni.srcDirs = []           //disable automatic ndk-build call
+            jniLibs.srcDirs = ['libs']
+        }
+    }
 
 }
 
 dependencies {
+    compile fileTree(dir: 'libs', include: ['.jar','.so'])
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.4.0'
@@ -87,8 +95,8 @@ dependencies {
 
 tasks.getByName("build"){
     it.doLast{
-        println "$project.name: After assemble, jar libs are copied tolocal repository"
-        //copyOutput(true)  //copyOutput是utils.gradle输出的closure
+        println "$project.name: After build, jar libs are copied tolocal repository"
+        copyApk()
     }
 }
 
@@ -97,6 +105,6 @@ tasks.getByName("build"){
   导向图完成后,禁止所有任务的release和test
 */
 project.afterEvaluate{
-    disableReleaseBuild()
-    disableTestBuild()
+//    disableReleaseBuild()
+//    disableTest()
 }
