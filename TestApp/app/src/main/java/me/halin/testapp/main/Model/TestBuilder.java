@@ -1,5 +1,7 @@
 package me.halin.testapp.main.Model;
 
+import android.app.Activity;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,6 +18,7 @@ import me.halin.testapp.Dagger2.Singleton.DaggerSingletonActivity;
 import me.halin.testapp.Dagger2.StaticInject.DaggerStaticInjectActivity;
 import me.halin.testapp.EspressonTestDemo.espresso.example.EspressoTestActivity;
 import me.halin.testapp.FragmentDemo.FragmentTestActivity;
+import me.halin.testapp.ModelExtensionDemo.ModelExtensionDemoActivity;
 import me.halin.testapp.MonkeyRunner.MonkeyRunnerDemoActivity;
 import me.halin.testapp.RecycleView.Base.RecycleViewBaseActivity;
 import me.halin.testapp.RequestSimulator.RequestSimulatorActivity;
@@ -39,7 +42,7 @@ import me.halin.testapp.databinding.Observable.DataBindingObservableActivity;
 /**
  * /**
  * 测试参数构造
- * <p/>
+ * <p>
  * Created by halin on 9/17/15.
  */
 public class TestBuilder {
@@ -107,11 +110,14 @@ public class TestBuilder {
         String webSocketTestGroupName = "WebSocket测试";
         add(webSocketTestGroupName, "WebSocket测试", WebSocketDemoActivity.class);
 
+        String modelExtensionGroupName = "Model Extension Demo";
+        add(modelExtensionGroupName, modelExtensionGroupName, ModelExtensionDemoActivity.class);
+
         return testList;
     }
 
 
-    protected void add(String groupName, String testName, Class clazz) {
+    protected void add(String groupName, String testName, Class<? extends Activity> clazz) {
         TestItem testItem = new TestItem(groupName, testName, clazz);
         testList.add(testItem);
     }

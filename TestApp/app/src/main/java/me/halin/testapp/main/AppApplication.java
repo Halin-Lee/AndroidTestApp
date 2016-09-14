@@ -11,11 +11,13 @@ import android.os.Bundle;
 import android.os.Looper;
 import android.os.MessageQueue;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.Printer;
 import android.widget.Toast;
 
 import com.taobao.android.dexposed.DexposedBridge;
 import com.taobao.android.dexposed.XC_MethodHook;
+import com.trackandtrace.lazylist.CommonUtilities;
 
 import java.util.Arrays;
 import java.util.UUID;
@@ -45,7 +47,9 @@ public class AppApplication extends android.app.Application {
     @Override
     public void onCreate() {
         super.onCreate();
-
+        Log.e(TAG, "TEST BEFORE");
+        Log.e(TAG, "TEST:" + new CommonUtilities().getKeyHeader());
+        Log.e(TAG, "TEST AFTER");
         initFundamental();
 
         WatchDogService.getInstance().setup();
@@ -60,7 +64,6 @@ public class AppApplication extends android.app.Application {
             });
 
         }
-
 
         instance = this;
 

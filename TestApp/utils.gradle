@@ -23,8 +23,19 @@ def disableReleaseBuild(){
     }
 }
 
+def copyApk(){
 
-def disableTestBuild(){
+
+    File inputFile = new File(project.getBuildDir() , "/outputs/apk/app-debug.apk");
+    File outputFile = new File(rootDir.getAbsolutePath() + "/app-debug.apk");
+
+    println "copy " + inputFile.absolutePath + " to " + outputFile.absolutePath
+    GFileUtils.copyFile(inputFile,outputFile);
+
+}
+
+
+def disableTest(){
 
     def targetTasks = project.tasks.findAll{task ->
         task.name.contains("Test")
@@ -43,5 +54,6 @@ ext{
     //ext{}不是ext(Closure)对应的函数调用。但是ext{}中的{}确实是闭包。
     getVersionNameAdvanced = this.&getVersionNameAdvanced
     disableReleaseBuild = this.&disableReleaseBuild
-    disableTestBuild = this.&disableTestBuild
+    disableTest = this.&disableTest
+    copyApk = this.&copyApk
 }

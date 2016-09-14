@@ -162,6 +162,9 @@
         <activity
             android:name=".WebSocket.WebSocketDemoActivity"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ModelExtensionDemo.ModelExtensionDemoActivity"
+            android:theme="@style/AppTheme" />
 
         <!-- 可搜索内容-->
         <!--<provider-->
