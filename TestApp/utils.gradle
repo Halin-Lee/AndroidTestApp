@@ -33,9 +33,31 @@ def copyApk(){
     GFileUtils.copyFile(inputFile,outputFile);
 
 }
+def disableLint(Project project) {
 
+    def targetTasks = project.tasks.findAll { task ->
+        task.name.toLowerCase().contains("lint")
+    }
 
-def disableTest(){
+    targetTasks.each {
+        println "disable test $project task  :${it.name}"
+        it.setEnabled false
+    }
+}
+
+def disableTest(Project project) {
+
+    def targetTasks = project.tasks.findAll { task ->
+        task.name.toLowerCase().contains("test")
+    }
+
+    targetTasks.each {
+        println "disable test $project task  :${it.name}"
+        it.setEnabled false
+    }
+}
+
+def disableTests(){
 
     def targetTasks = project.tasks.findAll{task ->
         task.name.contains("Test")
@@ -56,4 +78,6 @@ ext{
     disableReleaseBuild = this.&disableReleaseBuild
     disableTest = this.&disableTest
     copyApk = this.&copyApk
+    disableLint = this.&disableLint
+    disableTests = this.&disableTests
 }

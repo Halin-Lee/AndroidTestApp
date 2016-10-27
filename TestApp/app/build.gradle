@@ -104,7 +104,18 @@ tasks.getByName("build"){
 /*
   导向图完成后,禁止所有任务的release和test
 */
-project.afterEvaluate{
-//    disableReleaseBuild()
-//    disableTest()
+project.afterEvaluate {
+//    gradle.allprojects {
+//        disableReleaseBuild()
+//    }
+////    disableTest()
+//
+//    gradle.allprojects {
+//        disableLint(it)
+//    }
+//
+//    //禁用test
+//    gradle.allprojects {
+//        disableTest(it)
+//    }
 }
