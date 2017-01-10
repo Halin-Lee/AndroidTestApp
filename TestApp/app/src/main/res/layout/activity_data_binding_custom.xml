@@ -4,7 +4,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- 自定义绑定类名称-->
-    <data class="me.halin.testapp.databinding.Custom.Model.DataBindingCustomBinder">
+    <data class="me.halin.testapp.SystemUI.databinding.Custom.Model.DataBindingCustomBinder">
         <!-- variable无法使用自己类型作为参数,即type为me.halin.testapp.DataBinding.Custom.Model.DataBindingCustomBinder-->
         <variable
             name="binder"

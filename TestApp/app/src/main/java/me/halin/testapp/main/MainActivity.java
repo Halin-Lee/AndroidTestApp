@@ -1,16 +1,10 @@
 package me.halin.testapp.main;
 
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import me.halin.fundamental.LogUtil.Logger;
-import me.halin.testapp.UserCenter.SignInRequest;
 import me.halin.testapp.main.Model.TestBuilder;
 import me.halin.testapp.main.Model.TestItem;
 import me.halin.testapp.main.view.MainPresenter;
@@ -32,7 +26,6 @@ public class MainActivity extends AppCompatActivity implements MainDataHolder.It
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        SignInRequest.test();
 
         final MainDataHolder dataHolder = new MainDataHolder();
         dataHolder.itemClickListener.set(this);

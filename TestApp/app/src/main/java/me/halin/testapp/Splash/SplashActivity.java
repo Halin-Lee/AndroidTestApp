@@ -4,10 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.util.Log;
 
 import me.halin.testapp.main.MainActivity;
-import me.halin.testapp.databinding.Base.DataBindingBaseActivity;
 
 /**
  * Created by Halin on 3/21/16.

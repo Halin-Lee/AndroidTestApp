@@ -8,36 +8,39 @@ import java.util.List;
 import me.halin.testapp.Account.AccountDemoActivity;
 import me.halin.testapp.AutoEventTracking.Demo.AutoEventTrackingDemoActivity;
 import me.halin.testapp.AutoEventTracking.Demo.AutoEventTrackingFragmentDemoActivity;
-import me.halin.testapp.Dagger2.AutoGenerate.DaggerAutoGenerateActivity;
-import me.halin.testapp.Dagger2.Base.DaggerBaseActivity;
-import me.halin.testapp.Dagger2.Dependencies.DaggerDependenciesActivity;
-import me.halin.testapp.Dagger2.InjectMethod.DaggerMethodInjectActivity;
-import me.halin.testapp.Dagger2.InnerClass.DaggerInnerClassActivity;
-import me.halin.testapp.Dagger2.Named.DaggerNamedActivity;
-import me.halin.testapp.Dagger2.Singleton.DaggerSingletonActivity;
-import me.halin.testapp.Dagger2.StaticInject.DaggerStaticInjectActivity;
+
 import me.halin.testapp.EspressonTestDemo.espresso.example.EspressoTestActivity;
 import me.halin.testapp.FragmentDemo.FragmentTestActivity;
 import me.halin.testapp.ModelExtensionDemo.ModelExtensionDemoActivity;
 import me.halin.testapp.MonkeyRunner.MonkeyRunnerDemoActivity;
-import me.halin.testapp.RecycleView.Base.RecycleViewBaseActivity;
 import me.halin.testapp.RequestSimulator.RequestSimulatorActivity;
-import me.halin.testapp.WebSocket.WebSocketDemoActivity;
-import me.halin.testapp.databinding.AdvancedBinding.DataBindingAdvancedBindingActivity;
-import me.halin.testapp.databinding.AttributeSetter.DataBindingAttributeSetterActivity;
-import me.halin.testapp.databinding.Base.DataBindingBaseActivity;
-import me.halin.testapp.databinding.Custom.DataBindingCustomActivity;
-import me.halin.testapp.databinding.DataObjects.DataBindingObservableCollectionActivity;
-import me.halin.testapp.databinding.DataObjects.DataBindingObservableFieldActivity;
-import me.halin.testapp.databinding.DataObjects.DataBindingObservableObjectActivity;
-import me.halin.testapp.databinding.DemoList.DataBindingDemoListActivity;
-import me.halin.testapp.databinding.Event.DataBindingEventActivity;
-import me.halin.testapp.databinding.Expression.DataBindingExpressionActivity;
-import me.halin.testapp.databinding.GeneratedBinding.DataBindingGeneratedBindingActivity;
-import me.halin.testapp.databinding.Import.DataBindingImportActivity;
-import me.halin.testapp.databinding.Include.DataBindingIncludeActivity;
-import me.halin.testapp.databinding.List.DataBindingListActivity;
-import me.halin.testapp.databinding.Observable.DataBindingObservableActivity;
+import me.halin.testapp.SystemUI.DrawerLayout.DrawerLayoutDemoActivity;
+import me.halin.testapp.SystemUI.RecycleView.RecycleViewBaseActivity;
+import me.halin.testapp.Test.DrawableTestActivity;
+import me.halin.testapp.ThirdPartyLibrary.Dagger2.AutoGenerate.DaggerAutoGenerateActivity;
+import me.halin.testapp.ThirdPartyLibrary.Dagger2.Base.DaggerBaseActivity;
+import me.halin.testapp.ThirdPartyLibrary.Dagger2.Dependencies.DaggerDependenciesActivity;
+import me.halin.testapp.ThirdPartyLibrary.Dagger2.InjectMethod.DaggerMethodInjectActivity;
+import me.halin.testapp.ThirdPartyLibrary.Dagger2.InnerClass.DaggerInnerClassActivity;
+import me.halin.testapp.ThirdPartyLibrary.Dagger2.Named.DaggerNamedActivity;
+import me.halin.testapp.ThirdPartyLibrary.Dagger2.Singleton.DaggerSingletonActivity;
+import me.halin.testapp.ThirdPartyLibrary.Dagger2.StaticInject.DaggerStaticInjectActivity;
+import me.halin.testapp.ThirdPartyLibrary.WebSocket.WebSocketDemoActivity;
+import me.halin.testapp.SystemUI.databinding.AdvancedBinding.DataBindingAdvancedBindingActivity;
+import me.halin.testapp.SystemUI.databinding.AttributeSetter.DataBindingAttributeSetterActivity;
+import me.halin.testapp.SystemUI.databinding.Base.DataBindingBaseActivity;
+import me.halin.testapp.SystemUI.databinding.Custom.DataBindingCustomActivity;
+import me.halin.testapp.SystemUI.databinding.DataObjects.DataBindingObservableCollectionActivity;
+import me.halin.testapp.SystemUI.databinding.DataObjects.DataBindingObservableFieldActivity;
+import me.halin.testapp.SystemUI.databinding.DataObjects.DataBindingObservableObjectActivity;
+import me.halin.testapp.SystemUI.databinding.DemoList.DataBindingDemoListActivity;
+import me.halin.testapp.SystemUI.databinding.Event.DataBindingEventActivity;
+import me.halin.testapp.SystemUI.databinding.Expression.DataBindingExpressionActivity;
+import me.halin.testapp.SystemUI.databinding.GeneratedBinding.DataBindingGeneratedBindingActivity;
+import me.halin.testapp.SystemUI.databinding.Import.DataBindingImportActivity;
+import me.halin.testapp.SystemUI.databinding.Include.DataBindingIncludeActivity;
+import me.halin.testapp.SystemUI.databinding.List.DataBindingListActivity;
+import me.halin.testapp.SystemUI.databinding.Observable.DataBindingObservableActivity;
 
 /**
  * /**
@@ -113,6 +116,11 @@ public class TestBuilder {
         String modelExtensionGroupName = "Model Extension Demo";
         add(modelExtensionGroupName, modelExtensionGroupName, ModelExtensionDemoActivity.class);
 
+        String drawerLayoutDemoGroupName = "Drawer Layout Demo";
+        add(drawerLayoutDemoGroupName, drawerLayoutDemoGroupName, DrawerLayoutDemoActivity.class);
+
+        String drawableTestGroupName = "Drawable Test";
+        add(drawableTestGroupName, drawableTestGroupName, DrawableTestActivity.class);
         return testList;
     }
 

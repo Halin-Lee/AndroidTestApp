@@ -43,44 +43,46 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['.jar','.so'])
+    compile fileTree(dir: 'libs', include: ['.jar', '.so'])
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.4.0'
-    compile 'com.android.support:recyclerview-v7:23.4.0'
     //facebook rebound框架学习
-    compile 'com.facebook.rebound:rebound:0.3.8'
     //websocket
-    compile 'org.java-websocket:Java-WebSocket:1.3.0'
     //测试框架
     //JUnit下使用mockito时的配置
     testCompile 'junit:junit:4.12'
-    testCompile 'org.mockito:mockito-core:1.10.19'
     //robolectric
-    testCompile 'org.robolectric:robolectric:3.0'
     //AndroidInstrumentation测试配置
-    androidTestCompile 'com.android.support:support-annotations:23.4.0'
-    androidTestCompile 'com.android.support.test:runner:0.4.1'
-    androidTestCompile 'com.android.support.test:rules:0.4.1'
-    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'
     //UI测试框架
-    androidTestCompile 'junit:junit:4.12'
-    androidTestCompile 'com.google.dexmaker:dexmaker:1.2'
-    androidTestCompile 'com.google.dexmaker:dexmaker-mockito:1.2'
-    androidTestCompile 'org.mockito:mockito-core:1.10.19'
     compile project(':fundamental')
     //xstream
     compile('com.thoughtworks.xstream:xstream:1.4.7') {
         exclude group: 'xmlpull', module: 'xmlpull'
     }
     //dagger2
-    apt 'com.google.dagger:dagger-compiler:2.0'
+    //greenDao
+    //dexposed
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.android.support:recyclerview-v7:23.4.0'
+    compile 'com.facebook.rebound:rebound:0.3.8'
+    compile 'org.java-websocket:Java-WebSocket:1.3.0'
     compile 'com.google.dagger:dagger:2.0'
     compile 'javax.annotation:jsr250-api:1.0'
-    //greenDao
     compile 'org.greenrobot:greendao:2.2.1'
-    //dexposed
-    compile 'com.taobao.android:dexposed:0.1.1@aar'
+//    只能在5.0以下使用
+//    compile 'com.taobao.android:dexposed:0.1.1@aar'
+    compile 'com.android.support:design:23.4.0'
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:1.10.19'
+    testCompile 'org.robolectric:robolectric:3.0'
+    androidTestCompile 'com.android.support:support-annotations:23.4.0'
+    androidTestCompile 'com.android.support.test:runner:0.5'
+    androidTestCompile 'com.android.support.test:rules:0.5'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    androidTestCompile 'junit:junit:4.12'
+    androidTestCompile 'com.google.dexmaker:dexmaker:1.2'
+    androidTestCompile 'com.google.dexmaker:dexmaker-mockito:1.2'
+    androidTestCompile 'org.mockito:mockito-core:1.10.19'
+    apt 'com.google.dagger:dagger-compiler:2.0'
 }
 
 //beforeProject{
@@ -93,13 +95,12 @@ dependencies {
 //
 //}
 
-tasks.getByName("build"){
-    it.doLast{
+tasks.getByName("build") {
+    it.doLast {
         println "$project.name: After build, jar libs are copied tolocal repository"
         copyApk()
     }
 }
-
 
 /*
   导向图完成后,禁止所有任务的release和test

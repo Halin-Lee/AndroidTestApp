@@ -4,9 +4,10 @@
 
     <data>
 
+
         <variable
             name="activity"
-            type="me.halin.testapp.databinding.Event.DataBindingEventActivity" />
+            type="me.halin.testapp.SystemUI.databinding.Event.DataBindingEventActivity" />
     </data>
 
     <LinearLayout

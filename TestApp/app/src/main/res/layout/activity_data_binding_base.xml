@@ -8,7 +8,7 @@
         <!-- 定义绑定器的参数 @param name 名称 @param type 对应的类-->
         <variable
             name="bindModel"
-            type="me.halin.testapp.databinding.Base.Model.BindModel" />
+            type="me.halin.testapp.SystemUI.databinding.Base.Model.BindModel" />
 
     </data>
 

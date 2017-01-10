@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/activity_drawable_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context="me.halin.testapp.Test.DrawableTestActivity">
+
+        <View
+            android:id="@+id/transition_drawable_view"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/drawable_test_transition"
+            android:onClick="playTransition" />
+
+        <View
+            android:id="@+id/clip_drawable_view"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/drawable_test_clip"
+            android:onClick="playClip" />
+
+        <View
+            android:id="@+id/scale_drawable_view"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/drawable_test_scale"
+            android:onClick="playScale" />
+
+        <View
+            android:id="@+id/scale_drawable_ripple"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/drawable_test_ripple"
+            android:onClick="playRipple" />
+    </LinearLayout>
+</ScrollView>

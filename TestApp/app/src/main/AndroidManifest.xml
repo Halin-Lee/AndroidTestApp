@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="me.halin.testapp">
 
@@ -11,14 +12,14 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity android:name=".Splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
-            <!--AppIndexing相关Filter,拦截所有Halin://的请求-->
+            <!-- AppIndexing相关Filter,拦截所有Halin://的请求 -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -29,84 +30,64 @@
                 <data android:host="Test" />
             </intent-filter>
         </activity>
-
-
         <activity
-            android:name="me.halin.testapp.main.MainActivity"
-            android:label="@string/app_name">
+            android:name=".main.MainActivity"
+            android:label="@string/app_name" />
 
-        </activity>
-
-
-        <!-- dataBinding测试Activity-->
+        <!-- dataBinding测试Activity -->
         <activity
-            android:name=".databinding.Base.DataBindingBaseActivity"
-            android:theme="@style/AppTheme" />
-
-        <activity
-            android:name=".databinding.List.DataBindingListActivity"
-            android:theme="@style/AppTheme" />
-
-        <activity
-            android:name=".databinding.Event.DataBindingEventActivity"
-            android:theme="@style/AppTheme" />
-
-        <activity
-            android:name=".databinding.Import.DataBindingImportActivity"
-            android:theme="@style/AppTheme" />
-
-        <activity
-            android:name=".databinding.Custom.DataBindingCustomActivity"
-            android:theme="@style/AppTheme" />
-
-        <activity
-            android:name=".databinding.Include.DataBindingIncludeActivity"
+            android:name=".SystemUI.databinding.Base.DataBindingBaseActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".databinding.Expression.DataBindingExpressionActivity"
+            android:name=".SystemUI.databinding.List.DataBindingListActivity"
             android:theme="@style/AppTheme" />
-
         <activity
-            android:name=".databinding.DataObjects.DataBindingObservableObjectActivity"
+            android:name=".SystemUI.databinding.Event.DataBindingEventActivity"
             android:theme="@style/AppTheme" />
-
         <activity
-            android:name=".databinding.DataObjects.DataBindingObservableFieldActivity"
+            android:name=".SystemUI.databinding.Import.DataBindingImportActivity"
             android:theme="@style/AppTheme" />
-
         <activity
-            android:name=".databinding.DataObjects.DataBindingObservableCollectionActivity"
+            android:name=".SystemUI.databinding.Custom.DataBindingCustomActivity"
             android:theme="@style/AppTheme" />
-
         <activity
-            android:name=".databinding.GeneratedBinding.DataBindingGeneratedBindingActivity"
+            android:name=".SystemUI.databinding.Include.DataBindingIncludeActivity"
             android:theme="@style/AppTheme" />
-
         <activity
-            android:name=".databinding.AdvancedBinding.DataBindingAdvancedBindingActivity"
+            android:name=".SystemUI.databinding.Expression.DataBindingExpressionActivity"
             android:theme="@style/AppTheme" />
-
         <activity
-            android:name=".databinding.DemoList.DataBindingDemoListActivity"
+            android:name=".SystemUI.databinding.DataObjects.DataBindingObservableObjectActivity"
             android:theme="@style/AppTheme" />
-
-        <activity android:name=".databinding.Observable.DataBindingObservableActivity" />
-
-        <activity android:name=".databinding.AttributeSetter.DataBindingAttributeSetterActivity" />
-
-
-        <!-- recycleView测试Activity-->
         <activity
-            android:name=".RecycleView.Base.RecycleViewBaseActivity"
+            android:name=".SystemUI.databinding.DataObjects.DataBindingObservableFieldActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SystemUI.databinding.DataObjects.DataBindingObservableCollectionActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SystemUI.databinding.GeneratedBinding.DataBindingGeneratedBindingActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SystemUI.databinding.AdvancedBinding.DataBindingAdvancedBindingActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".SystemUI.databinding.DemoList.DataBindingDemoListActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".SystemUI.databinding.Observable.DataBindingObservableActivity" />
+        <activity android:name=".SystemUI.databinding.AttributeSetter.DataBindingAttributeSetterActivity" />
+
+        <!-- recycleView测试Activity -->
+        <activity
+            android:name=".SystemUI.RecycleView.RecycleViewBaseActivity"
             android:theme="@style/AppTheme" />
 
-
-        <!-- 测试Activity-->
+        <!-- 测试Activity -->
         <activity
             android:name=".EspressonTestDemo.espresso.example.EspressoTestActivity"
             android:theme="@style/AppTheme" />
 
-        <!-- 自动化埋点-->
+        <!-- 自动化埋点 -->
         <activity
             android:name=".AutoEventTracking.Demo.AutoEventTrackingDemoActivity"
             android:theme="@style/AppTheme" />
@@ -114,62 +95,61 @@
             android:name=".AutoEventTracking.Demo.AutoEventTrackingFragmentDemoActivity"
             android:theme="@style/AppTheme" />
 
-        <!-- 原生第三方登录授权-->
+        <!-- 原生第三方登录授权 -->
         <activity
             android:name=".Account.AccountDemoActivity"
             android:theme="@style/AppTheme" />
 
-        <!--Dagger2测试-->
+        <!-- Dagger2测试 -->
         <activity
-            android:name=".Dagger2.Base.DaggerBaseActivity"
-            android:theme="@style/AppTheme" />
-
-        <activity
-            android:name=".Dagger2.InjectMethod.DaggerMethodInjectActivity"
-            android:theme="@style/AppTheme" />
-
-        <activity
-            android:name=".Dagger2.Dependencies.DaggerDependenciesActivity"
-            android:theme="@style/AppTheme" />
-
-        <activity
-            android:name=".Dagger2.AutoGenerate.DaggerAutoGenerateActivity"
+            android:name=".ThirdPartyLibrary.Dagger2.Base.DaggerBaseActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Dagger2.Named.DaggerNamedActivity"
+            android:name=".ThirdPartyLibrary.Dagger2.InjectMethod.DaggerMethodInjectActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Dagger2.Singleton.DaggerSingletonActivity"
+            android:name=".ThirdPartyLibrary.Dagger2.Dependencies.DaggerDependenciesActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Dagger2.StaticInject.DaggerStaticInjectActivity"
+            android:name=".ThirdPartyLibrary.Dagger2.AutoGenerate.DaggerAutoGenerateActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".Dagger2.InnerClass.DaggerInnerClassActivity"
+            android:name=".ThirdPartyLibrary.Dagger2.Named.DaggerNamedActivity"
             android:theme="@style/AppTheme" />
-
+        <activity
+            android:name=".ThirdPartyLibrary.Dagger2.Singleton.DaggerSingletonActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ThirdPartyLibrary.Dagger2.StaticInject.DaggerStaticInjectActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ThirdPartyLibrary.Dagger2.InnerClass.DaggerInnerClassActivity"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".FragmentDemo.FragmentTestActivity"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".RequestSimulator.RequestSimulatorActivity"
             android:theme="@style/AppTheme" />
-
         <activity
             android:name=".MonkeyRunner.MonkeyRunnerDemoActivity"
             android:theme="@style/AppTheme" />
-
         <activity
-            android:name=".WebSocket.WebSocketDemoActivity"
+            android:name=".ThirdPartyLibrary.WebSocket.WebSocketDemoActivity"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".ModelExtensionDemo.ModelExtensionDemoActivity"
             android:theme="@style/AppTheme" />
 
-        <!-- 可搜索内容-->
-        <!--<provider-->
-        <!--android:name="me.halin.testapp.SearchableActivity.SearchableProvider"-->
-        <!--android:authorities="de.openminds.SampleRecentSuggestionsProvider"></provider>-->
+        <!-- 可搜索内容 -->
+        <!-- <provider -->
+        <!-- android:name="me.halin.testapp.SearchableActivity.SearchableProvider" -->
+        <!-- android:authorities="de.openminds.SampleRecentSuggestionsProvider"></provider> -->
+        <activity
+            android:name=".SystemUI.DrawerLayout.DrawerLayoutDemoActivity"
+            android:label="@string/title_activity_drawer_layout_demo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Test.DrawableTestActivity"></activity>
     </application>
 
 </manifest>
