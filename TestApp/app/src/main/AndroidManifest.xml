@@ -149,7 +149,18 @@
             android:name=".SystemUI.DrawerLayout.DrawerLayoutDemoActivity"
             android:label="@string/title_activity_drawer_layout_demo"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Test.DrawableTestActivity"></activity>
+        <activity android:name=".Test.DrawableTestActivity" />
+        <activity
+            android:name=".Test.ThemeTestActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ThirdPartyLibrary.Realm.RealmDemoActivity"
+            android:label="@string/title_activity_realm_demo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".System.LoaderManager.LoaderManagerDemoActivity"
+            android:label="@string/title_activity_loader_manager_demo"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

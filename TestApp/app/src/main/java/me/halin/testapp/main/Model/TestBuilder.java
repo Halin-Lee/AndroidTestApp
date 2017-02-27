@@ -17,6 +17,7 @@ import me.halin.testapp.RequestSimulator.RequestSimulatorActivity;
 import me.halin.testapp.SystemUI.DrawerLayout.DrawerLayoutDemoActivity;
 import me.halin.testapp.SystemUI.RecycleView.RecycleViewBaseActivity;
 import me.halin.testapp.Test.DrawableTestActivity;
+import me.halin.testapp.Test.ThemeTestActivity;
 import me.halin.testapp.ThirdPartyLibrary.Dagger2.AutoGenerate.DaggerAutoGenerateActivity;
 import me.halin.testapp.ThirdPartyLibrary.Dagger2.Base.DaggerBaseActivity;
 import me.halin.testapp.ThirdPartyLibrary.Dagger2.Dependencies.DaggerDependenciesActivity;
@@ -121,6 +122,10 @@ public class TestBuilder {
 
         String drawableTestGroupName = "Drawable Test";
         add(drawableTestGroupName, drawableTestGroupName, DrawableTestActivity.class);
+
+        String themeTestGroupName = "Theme Test";
+        add(themeTestGroupName, themeTestGroupName, ThemeTestActivity.class);
+
         return testList;
     }
 

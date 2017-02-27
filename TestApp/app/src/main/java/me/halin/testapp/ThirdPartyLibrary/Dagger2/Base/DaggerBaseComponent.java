@@ -1,0 +1,22 @@
+package me.halin.testapp.ThirdPartyLibrary.Dagger2.Base;
+
+import android.content.Context;
+
+import javax.inject.Singleton;
+
+import dagger.Component;
+
+/**
+ *
+ *
+ *
+ * Created by 17track on 4/8/16.
+ */
+@Singleton
+@Component(modules = {DaggerBaseModule.class})
+public interface DaggerBaseComponent {
+
+    Context getContext();
+
+    void inject(DaggerBaseActivity activity);
+}

@@ -5,7 +5,8 @@ apply from: rootProject.getRootDir().getAbsolutePath() + "/utils.gradle"
 
 //dagger2
 apply plugin: 'com.neenbedankt.android-apt'
-
+//realm
+apply plugin: 'realm-android'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"

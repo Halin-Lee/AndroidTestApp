@@ -24,7 +24,7 @@ public class AppApplication extends android.app.Application {
 
         initFundamental();
 
-        WatchDogService.getInstance().setup();
+//        WatchDogService.getInstance().setup();
 
 //        if (DexposedBridge.canDexposed(this)) {
 //            DexposedBridge.findAndHookMethod(Activity.class, "onCreate", Bundle.class, new XC_MethodHook() {
