@@ -120,9 +120,6 @@
             android:name=".ThirdPartyLibrary.Dagger2.Singleton.DaggerSingletonActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".ThirdPartyLibrary.Dagger2.StaticInject.DaggerStaticInjectActivity"
-            android:theme="@style/AppTheme" />
-        <activity
             android:name=".ThirdPartyLibrary.Dagger2.InnerClass.DaggerInnerClassActivity"
             android:theme="@style/AppTheme" />
         <activity
@@ -160,7 +157,9 @@
         <activity
             android:name=".System.LoaderManager.LoaderManagerDemoActivity"
             android:label="@string/title_activity_loader_manager_demo"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ThirdPartyLibrary.Dagger2.SubComponent.SubComponentActivity" />
+        <activity android:name=".SystemUI.databinding.BindingAdapter.DataBindingBindingAdapterActivity"></activity>
     </application>
 
 </manifest>
