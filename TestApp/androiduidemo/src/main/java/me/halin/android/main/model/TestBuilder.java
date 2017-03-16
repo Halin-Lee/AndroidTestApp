@@ -9,6 +9,7 @@ import me.halin.android.ui.coordinatorlayout.CoordinatorLayoutAppBarLayoutActivi
 import me.halin.android.ui.coordinatorlayout.CoordinatorLayoutCollapsingToolbarLayoutActivity;
 import me.halin.android.ui.coordinatorlayout.CoordinatorLayoutSnackbarActivity;
 import me.halin.android.ui.drawerlayout.DrawerLayoutActivity;
+import me.halin.android.ui.inputtextlayout.TextInputLayoutActivity;
 import me.halin.android.ui.navigationview.NavigationViewActivity;
 import me.halin.android.ui.toolbar.ToolbarActivity;
 
@@ -39,6 +40,10 @@ public class TestBuilder {
         add(coordinatorLayoutGroupName, "Snackbar", CoordinatorLayoutSnackbarActivity.class);
         add(coordinatorLayoutGroupName, "App Bar Layout", CoordinatorLayoutAppBarLayoutActivity.class);
         add(coordinatorLayoutGroupName, "Collapsing Toolbar", CoordinatorLayoutCollapsingToolbarLayoutActivity.class);
+
+
+        String textInputLayoutGroupName = "Text Input Layout Test";
+        add(textInputLayoutGroupName, "Text Input Layout", TextInputLayoutActivity.class);
         return testList;
     }
 

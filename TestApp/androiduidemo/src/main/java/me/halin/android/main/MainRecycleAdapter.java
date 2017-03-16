@@ -8,10 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import me.halin.android.ui.BR;
-import me.halin.android.ui.R;
-import me.halin.android.ui.databinding.ItemMainBinding;
+import me.halin.android.R;
+import me.halin.android.BR;
+
 import me.halin.android.main.model.TestItem;
+import me.halin.android.databinding.ItemMainBinding;
 
 
 /**

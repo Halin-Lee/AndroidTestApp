@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import me.halin.android.ui.R;
+import me.halin.android.R;
 import me.halin.android.main.model.TestBuilder;
 import me.halin.android.main.model.TestItem;
 

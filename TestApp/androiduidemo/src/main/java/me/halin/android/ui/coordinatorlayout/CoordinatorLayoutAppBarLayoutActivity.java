@@ -3,7 +3,8 @@ package me.halin.android.ui.coordinatorlayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import me.halin.android.ui.R;
+import me.halin.android.R;
+
 
 public class CoordinatorLayoutAppBarLayoutActivity extends AppCompatActivity {
 

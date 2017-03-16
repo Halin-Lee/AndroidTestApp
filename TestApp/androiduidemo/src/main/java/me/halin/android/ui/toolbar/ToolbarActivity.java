@@ -6,7 +6,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import me.halin.android.ui.R;
+import me.halin.android.R;
+
 
 public class ToolbarActivity extends AppCompatActivity {
 
