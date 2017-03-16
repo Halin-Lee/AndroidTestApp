@@ -5,6 +5,7 @@ import android.app.Activity;
 import java.util.ArrayList;
 import java.util.List;
 
+import me.halin.android.ui.cardview.CardViewActivity;
 import me.halin.android.ui.coordinatorlayout.CoordinatorLayoutAppBarLayoutActivity;
 import me.halin.android.ui.coordinatorlayout.CoordinatorLayoutCollapsingToolbarLayoutActivity;
 import me.halin.android.ui.coordinatorlayout.CoordinatorLayoutSnackbarActivity;
@@ -35,15 +36,16 @@ public class TestBuilder {
         String navigationViewGroupName = "Navigation View Test";
         add(navigationViewGroupName, navigationViewGroupName, NavigationViewActivity.class);
 
-
         String coordinatorLayoutGroupName = "Coordinator Layout Test";
         add(coordinatorLayoutGroupName, "Snackbar", CoordinatorLayoutSnackbarActivity.class);
         add(coordinatorLayoutGroupName, "App Bar Layout", CoordinatorLayoutAppBarLayoutActivity.class);
         add(coordinatorLayoutGroupName, "Collapsing Toolbar", CoordinatorLayoutCollapsingToolbarLayoutActivity.class);
 
-
         String textInputLayoutGroupName = "Text Input Layout Test";
         add(textInputLayoutGroupName, "Text Input Layout", TextInputLayoutActivity.class);
+
+        String cardViewGroupName = "Card View Test";
+        add(cardViewGroupName, "Card View", CardViewActivity.class);
         return testList;
     }
 
