@@ -4,18 +4,18 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- 定义绑定器的类-->
-    <data >
+    <data>
         <!-- 定义绑定器的参数 @param name 名称 @param type 对应的类-->
 
 
         <!-- 定义绑定器的参数 @param name 名称 @param type 对应的类-->
         <import type="android.databinding.ObservableList" />
 
-        <import type="yqtrack.app.androiduidemo.main.model.TestItem" />
+        <import type="me.halin.android.main.model.TestItem" />
 
         <variable
             name="viewModel"
-            type="yqtrack.app.androiduidemo.main.MainViewModel" />
+            type="me.halin.android.main.MainViewModel" />
 
 
         <variable

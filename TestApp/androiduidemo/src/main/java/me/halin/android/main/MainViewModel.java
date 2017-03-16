@@ -1,9 +1,9 @@
-package yqtrack.app.androiduidemo.main;
+package me.halin.android.main;
 
 import android.databinding.ObservableArrayList;
 import android.databinding.ObservableField;
 
-import yqtrack.app.androiduidemo.main.model.TestItem;
+import me.halin.android.main.model.TestItem;
 
 
 /**

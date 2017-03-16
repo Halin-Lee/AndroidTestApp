@@ -1,19 +1,16 @@
-package yqtrack.app.androiduidemo.main;
+package me.halin.android.main;
 
 import android.content.Intent;
 import android.databinding.ObservableArrayList;
 import android.databinding.ObservableList;
-import android.support.annotation.WorkerThread;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import yqtrack.app.androiduidemo.R;
-import yqtrack.app.androiduidemo.main.model.TestBuilder;
-import yqtrack.app.androiduidemo.main.model.TestItem;
-
-import static java.security.AccessController.getContext;
+import me.halin.android.ui.R;
+import me.halin.android.main.model.TestBuilder;
+import me.halin.android.main.model.TestItem;
 
 public class MainActivity extends AppCompatActivity implements MainViewModel.ItemClickListener {
 

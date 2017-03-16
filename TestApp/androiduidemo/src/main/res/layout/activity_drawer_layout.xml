@@ -5,7 +5,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="yqtrack.app.androiduidemo.DrawerLayout.DrawerLayoutActivity">
+    tools:context="me.halin.android.ui.DrawerLayout.DrawerLayoutActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

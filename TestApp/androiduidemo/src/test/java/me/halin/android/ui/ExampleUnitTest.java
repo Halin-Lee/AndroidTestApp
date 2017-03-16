@@ -1,4 +1,4 @@
-package yqtrack.app.androiduidemo;
+package me.halin.android.ui;
 
 import org.junit.Test;
 

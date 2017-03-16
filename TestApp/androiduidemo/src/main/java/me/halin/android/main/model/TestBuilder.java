@@ -1,16 +1,16 @@
-package yqtrack.app.androiduidemo.main.model;
+package me.halin.android.main.model;
 
 import android.app.Activity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import yqtrack.app.androiduidemo.coordinatorlayout.CoordinatorLayoutAppBarLayoutActivity;
-import yqtrack.app.androiduidemo.coordinatorlayout.CoordinatorLayoutCollapsingToolbarLayoutActivity;
-import yqtrack.app.androiduidemo.coordinatorlayout.CoordinatorLayoutSnackbarActivity;
-import yqtrack.app.androiduidemo.drawerlayout.DrawerLayoutActivity;
-import yqtrack.app.androiduidemo.navigationview.NavigationViewActivity;
-import yqtrack.app.androiduidemo.toolbar.ToolbarActivity;
+import me.halin.android.ui.coordinatorlayout.CoordinatorLayoutAppBarLayoutActivity;
+import me.halin.android.ui.coordinatorlayout.CoordinatorLayoutCollapsingToolbarLayoutActivity;
+import me.halin.android.ui.coordinatorlayout.CoordinatorLayoutSnackbarActivity;
+import me.halin.android.ui.drawerlayout.DrawerLayoutActivity;
+import me.halin.android.ui.navigationview.NavigationViewActivity;
+import me.halin.android.ui.toolbar.ToolbarActivity;
 
 /**
  * /**

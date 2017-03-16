@@ -1,4 +1,4 @@
-package yqtrack.app.androiduidemo.main;
+package me.halin.android.main;
 
 import android.databinding.DataBindingUtil;
 import android.databinding.ObservableList;
@@ -8,10 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import yqtrack.app.androiduidemo.BR;
-import yqtrack.app.androiduidemo.R;
-import yqtrack.app.androiduidemo.databinding.ItemMainBinding;
-import yqtrack.app.androiduidemo.main.model.TestItem;
+import me.halin.android.ui.BR;
+import me.halin.android.ui.R;
+import me.halin.android.ui.databinding.ItemMainBinding;
+import me.halin.android.main.model.TestItem;
 
 
 /**

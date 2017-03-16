@@ -1,4 +1,4 @@
-package yqtrack.app.androiduidemo.main.model;
+package me.halin.android.main.model;
 
 import android.app.Activity;
 

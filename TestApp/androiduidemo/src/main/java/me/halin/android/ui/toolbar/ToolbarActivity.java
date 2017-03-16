@@ -1,4 +1,4 @@
-package yqtrack.app.androiduidemo.toolbar;
+package me.halin.android.ui.toolbar;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -6,7 +6,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import yqtrack.app.androiduidemo.R;
+import me.halin.android.ui.R;
 
 public class ToolbarActivity extends AppCompatActivity {
 

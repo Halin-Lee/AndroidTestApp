@@ -1,10 +1,10 @@
-package yqtrack.app.androiduidemo.coordinatorlayout;
+package me.halin.android.ui.coordinatorlayout;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
-import yqtrack.app.androiduidemo.R;
+import me.halin.android.ui.R;
 
 public class CoordinatorLayoutCollapsingToolbarLayoutActivity extends AppCompatActivity {
 
@@ -19,5 +19,6 @@ public class CoordinatorLayoutCollapsingToolbarLayoutActivity extends AppCompatA
         getSupportActionBar().setHomeButtonEnabled(true);
         //home按键是否允许回退(如果允许显示回退,则无法自定义NavigationIcon)
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 }

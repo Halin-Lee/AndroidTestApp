@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="yqtrack.app.androiduidemo.coordinatorlayout.CoordinatorLayoutCollapsingToolbarLayoutActivity">
+    tools:context="me.halin.android.ui.coordinatorlayout.CoordinatorLayoutCollapsingToolbarLayoutActivity">
 
 
     <android.support.design.widget.AppBarLayout

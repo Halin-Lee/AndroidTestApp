@@ -1,4 +1,4 @@
-package yqtrack.app.androiduidemo.coordinatorlayout;
+package me.halin.android.ui.coordinatorlayout;
 
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import yqtrack.app.androiduidemo.R;
+import me.halin.android.ui.R;
 
 public class CoordinatorLayoutSnackbarActivity extends AppCompatActivity {
 
