@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--showAsAction ifRoom：如果由位置就会显示出来 never：永远不显示-->
+    <item
+        android:id="@+id/item_a"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="Item A"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/item_b"
+        android:icon="@android:drawable/ic_menu_call"
+        android:title="Item B"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/item_c"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:title="Item C"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/item_d"
+        android:icon="@android:drawable/ic_menu_compass"
+        android:title="Item D"
+        app:showAsAction="ifRoom" />
+
+</menu>

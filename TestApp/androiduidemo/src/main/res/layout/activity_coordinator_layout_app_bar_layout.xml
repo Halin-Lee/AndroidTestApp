@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="yqtrack.app.androiduidemo.coordinatorlayout.CoordinatorLayoutAppBarLayoutActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <!--scroll 容器可滚动 enterAlways 无论滚动容器在什么位置，只要下拉容器就会出现 enterAlwaysCollapsed 在未到达顶部时，容器只会显示出minHeight的高度 exitUntilCollapsed 容器只会退出到最小高度，不会完全退出-->
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:minHeight="40dp"
+            android:text="AppBarLayoutCollapsed"
+            android:textColor="@android:color/white"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed" />
+
+
+        <!--如果什么都没标注，该容器不会被隐藏-->
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@android:color/holo_green_light"
+            android:gravity="center"
+            android:minHeight="40dp"
+            android:text="AppBarLayout"
+            android:textColor="@android:color/white" />
+
+        <!--一个在非scroll容器下的view，就算设置scroll也不会被隐藏-->
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:minHeight="40dp"
+            android:text="AppBarLayoutCollapsed"
+            android:textColor="@android:color/white"
+            app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed" />
+    </android.support.design.widget.AppBarLayout>
+
+
+    <!--只有搭配了NestedScrollView或RecycledView才能有作用,如果同时存在两个NestedScrollView会异常-->
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/holo_blue_light"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:gravity="top"
+                android:lineSpacingExtra="8dp"
+                android:text="Content"
+                android:textColor="@android:color/black"
+                android:textSize="20sp" />
+        </FrameLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>

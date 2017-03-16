@@ -16,7 +16,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".featurediscovery.FeatureDiscoveryActivity"></activity>
+        <activity android:name=".drawerlayout.DrawerLayoutActivity" />
+        <activity android:name=".toolbar.ToolbarActivity" />
+        <activity android:name=".navigationview.NavigationViewActivity" />
+        <activity android:name=".coordinatorlayout.CoordinatorLayoutSnackbarActivity" />
+        <activity android:name=".coordinatorlayout.CoordinatorLayoutAppBarLayoutActivity" />
+        <activity android:name=".coordinatorlayout.CoordinatorLayoutCollapsingToolbarLayoutActivity"></activity>
     </application>
 
 </manifest>

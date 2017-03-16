@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 定义绑定器的类-->
+    <data >
+        <!-- 定义绑定器的参数 @param name 名称 @param type 对应的类-->
+
+
+        <!-- 定义绑定器的参数 @param name 名称 @param type 对应的类-->
+        <import type="android.databinding.ObservableList" />
+
+        <import type="yqtrack.app.androiduidemo.main.model.TestItem" />
+
+        <variable
+            name="viewModel"
+            type="yqtrack.app.androiduidemo.main.MainViewModel" />
+
+
+        <variable
+            name="index"
+            type="int" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- index为0的时候(第一项)或者testGroup名称与上一项不同的时候,才显示header-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@{((TestItem)viewModel.testList[index]).testGroup}"
+            android:textSize="25dp"
+            android:visibility="@{(index == 0 || !((TestItem)viewModel.testList[index]).testGroup.equals( ((TestItem)viewModel.testList[index-1]).testGroup))  ? View.VISIBLE : View.GONE}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:text="@{((TestItem)viewModel.testList[index]).testName}"
+            android:textSize="17dp" />
+
+    </LinearLayout>
+</layout>
