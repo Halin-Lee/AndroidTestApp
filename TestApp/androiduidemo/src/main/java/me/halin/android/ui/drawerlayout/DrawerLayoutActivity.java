@@ -9,7 +9,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
-import me.halin.android.ui.R;
+import me.halin.android.R;
+
 
 public class DrawerLayoutActivity extends AppCompatActivity {
 

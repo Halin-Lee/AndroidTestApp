@@ -6,7 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import me.halin.android.ui.R;
+import me.halin.android.R;
+
 
 public class CoordinatorLayoutSnackbarActivity extends AppCompatActivity {
 
