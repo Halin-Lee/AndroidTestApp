@@ -3,6 +3,7 @@ package yqtrack.app.androiduidemo.main;
 import android.content.Intent;
 import android.databinding.ObservableArrayList;
 import android.databinding.ObservableList;
+import android.support.annotation.WorkerThread;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -40,6 +41,8 @@ public class MainActivity extends AppCompatActivity implements MainViewModel.Ite
 
 
     }
+
+
 
     @Override
     public void onItemClick(TestItem item) {

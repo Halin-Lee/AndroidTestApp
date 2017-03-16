@@ -21,7 +21,7 @@
         <activity android:name=".navigationview.NavigationViewActivity" />
         <activity android:name=".coordinatorlayout.CoordinatorLayoutSnackbarActivity" />
         <activity android:name=".coordinatorlayout.CoordinatorLayoutAppBarLayoutActivity" />
-        <activity android:name=".coordinatorlayout.CoordinatorLayoutCollapsingToolbarLayoutActivity"></activity>
+        <activity android:name=".coordinatorlayout.CoordinatorLayoutCollapsingToolbarLayoutActivity" />
     </application>
 
 </manifest>
