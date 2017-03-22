@@ -23,7 +23,30 @@
         <activity android:name=".ui.coordinatorlayout.CoordinatorLayoutAppBarLayoutActivity" />
         <activity android:name=".ui.coordinatorlayout.CoordinatorLayoutCollapsingToolbarLayoutActivity" />
         <activity android:name=".ui.inputtextlayout.TextInputLayoutActivity" />
-        <activity android:name=".ui.cardview.CardViewActivity"></activity>
+        <activity android:name=".ui.cardview.CardViewActivity" />
+        <activity
+            android:name=".parentactivity.ParentActivity"
+            android:icon="@mipmap/ic_launcher_round"
+            android:label="Parent Activity"
+            android:parentActivityName=".main.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".main.MainActivity" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".parentactivity.ParentDiffAffinityActivity"
+            android:label="Parent Affinity Activity"
+            android:taskAffinity="me.halin.android.parent.other">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".main.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

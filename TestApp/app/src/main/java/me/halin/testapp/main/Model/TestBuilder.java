@@ -31,6 +31,7 @@ import me.halin.testapp.SystemUI.databinding.Import.DataBindingImportActivity;
 import me.halin.testapp.SystemUI.databinding.Include.DataBindingIncludeActivity;
 import me.halin.testapp.SystemUI.databinding.List.DataBindingListActivity;
 import me.halin.testapp.SystemUI.databinding.Observable.DataBindingObservableActivity;
+import me.halin.testapp.SystemUI.databinding.OnRebind.DataBindingOnRebindActivity;
 import me.halin.testapp.Test.DrawableTestActivity;
 import me.halin.testapp.Test.ThemeTestActivity;
 import me.halin.testapp.ThirdPartyLibrary.Dagger2.AutoGenerate.DaggerAutoGenerateActivity;
@@ -73,6 +74,7 @@ public class TestBuilder {
         add(dataBindingTestGroupName, "DataBinding Demo", DataBindingDemoListActivity.class);
         add(dataBindingTestGroupName, "Observable 测试", DataBindingObservableActivity.class);
         add(dataBindingTestGroupName, "DataBinding Attribute Setter", DataBindingAttributeSetterActivity.class);
+        add(dataBindingTestGroupName, "On Rebind", DataBindingOnRebindActivity.class);
 
         //recycleView
         String recycleViewTestGroupName = "RecycleView测试";

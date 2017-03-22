@@ -5,6 +5,7 @@ import android.app.Activity;
 import java.util.ArrayList;
 import java.util.List;
 
+import me.halin.android.parentactivity.ParentActivity;
 import me.halin.android.ui.cardview.CardViewActivity;
 import me.halin.android.ui.coordinatorlayout.CoordinatorLayoutAppBarLayoutActivity;
 import me.halin.android.ui.coordinatorlayout.CoordinatorLayoutCollapsingToolbarLayoutActivity;
@@ -46,6 +47,9 @@ public class TestBuilder {
 
         String cardViewGroupName = "Card View Test";
         add(cardViewGroupName, "Card View", CardViewActivity.class);
+
+        String parentActivityGroupName = "Parent Activity Test";
+        add(parentActivityGroupName, parentActivityGroupName, ParentActivity.class);
         return testList;
     }
 

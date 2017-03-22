@@ -159,7 +159,11 @@
             android:label="@string/title_activity_loader_manager_demo"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ThirdPartyLibrary.Dagger2.SubComponent.SubComponentActivity" />
-        <activity android:name=".SystemUI.databinding.BindingAdapter.DataBindingBindingAdapterActivity"></activity>
+        <activity android:name=".SystemUI.databinding.BindingAdapter.DataBindingBindingAdapterActivity" />
+        <activity
+            android:name=".SystemUI.databinding.OnRebind.DataBindingOnRebindActivity"
+            android:label="@string/title_activity_data_binding_on_rebind"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
