@@ -17,6 +17,7 @@
         android:orientation="vertical"
         tools:context="me.halin.uiframework.mvp.MVPActivity">
 
+
         <TextView
             android:id="@+id/text"
             android:layout_width="match_parent"

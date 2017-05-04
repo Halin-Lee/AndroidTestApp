@@ -57,6 +57,11 @@ public class ParentActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onResumeFragments() {
+        super.onResumeFragments();
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
 

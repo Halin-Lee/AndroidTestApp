@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--无法直接使用color，只能通过 drawable 实现-->
+    <!--<item android:drawable="?attr/colorAccent" />-->
+    <item android:drawable="@drawable/button_normal" />
+    <item android:drawable="@android:color/white" android:state_pressed="true" />
+</selector>

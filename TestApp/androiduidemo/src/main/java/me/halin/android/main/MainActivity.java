@@ -46,4 +46,12 @@ public class MainActivity extends AppCompatActivity implements MainViewModel.Ite
         Intent intent = new Intent(this, item.activityClass);
         startActivity(intent);
     }
+
+
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+    }
 }
+

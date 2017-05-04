@@ -11,9 +11,13 @@ import me.halin.android.ui.coordinatorlayout.CoordinatorLayoutAppBarLayoutActivi
 import me.halin.android.ui.coordinatorlayout.CoordinatorLayoutCollapsingToolbarLayoutActivity;
 import me.halin.android.ui.coordinatorlayout.CoordinatorLayoutSnackbarActivity;
 import me.halin.android.ui.drawerlayout.DrawerLayoutActivity;
+import me.halin.android.ui.fragmentretaininstance.FragmentRetainInstanceActivity;
 import me.halin.android.ui.inputtextlayout.TextInputLayoutActivity;
 import me.halin.android.ui.navigationview.NavigationViewActivity;
+import me.halin.android.ui.notificaitoncompat.NotificationCompatActivity;
+import me.halin.android.ui.theme.AppThemeActivity;
 import me.halin.android.ui.toolbar.ToolbarActivity;
+import me.halin.android.ui.transitionmanager.TransitionManagerActivity;
 
 /**
  * /**
@@ -50,6 +54,19 @@ public class TestBuilder {
 
         String parentActivityGroupName = "Parent Activity Test";
         add(parentActivityGroupName, parentActivityGroupName, ParentActivity.class);
+
+        String transitionManagerGroupName = "Transition Manager Test";
+        add(transitionManagerGroupName, transitionManagerGroupName, TransitionManagerActivity.class);
+
+        String notificationCompatGroupName = "Notification Compat Test";
+        add(notificationCompatGroupName, notificationCompatGroupName, NotificationCompatActivity.class);
+
+
+        String appThemeGroupName = "App Theme Test";
+        add(appThemeGroupName, appThemeGroupName, AppThemeActivity.class);
+
+        String retainGroupName = "Retain Instance Test";
+        add(retainGroupName, retainGroupName, FragmentRetainInstanceActivity.class);
         return testList;
     }
 

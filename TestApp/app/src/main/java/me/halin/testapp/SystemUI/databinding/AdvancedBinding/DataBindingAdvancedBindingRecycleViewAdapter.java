@@ -1,6 +1,8 @@
 package me.halin.testapp.SystemUI.databinding.AdvancedBinding;
 
 import android.databinding.DataBindingUtil;
+import android.databinding.ObservableArrayMap;
+import android.databinding.ObservableMap;
 import android.databinding.ViewDataBinding;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
