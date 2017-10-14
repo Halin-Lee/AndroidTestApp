@@ -163,7 +163,7 @@
         <activity
             android:name=".SystemUI.databinding.OnRebind.DataBindingOnRebindActivity"
             android:label="@string/title_activity_data_binding_on_rebind"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

@@ -5,7 +5,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.1'
+        classpath 'com.android.tools.build:gradle:2.3.3'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
 
@@ -36,7 +36,7 @@ subprojects {
         dependencies { //SB
             //dependencies表示我们编译的时候，依赖android开发的gradle插件。插件对应的
             //class path是com.android.tools.build。版本是1.2.3
-            classpath 'com.android.tools.build:gradle:2.3.1'
+            classpath 'com.android.tools.build:gradle:2.3.3'
         }
         //为每个子Project加载utils.gradle 。当然，这句话可以放到buildscript花括号之后
         apply from:rootProject.getRootDir().getAbsolutePath() + "/utils.gradle"

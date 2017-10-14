@@ -4,6 +4,7 @@ import me.halin.fundamental.NetworkCommunication.VolleyController;
 import me.halin.fundamental.Tools.ApplicationContextTools;
 import me.halin.fundamental.Tools.WatchDogService;
 import me.halin.testapp.BuildConfig;
+import me.halin.testapp.Test.WebViewTest;
 
 /**
  * Created by halin on 11/24/15.
@@ -45,6 +46,7 @@ public class AppApplication extends android.app.Application {
 //        ModuleLoader.getInstance().loadModule(this, GlobalConfiguration.getInstance(), DemoModuleDeclaration.class, "AppEnvironmentConfig.xml", null);
 
 
+        new WebViewTest(this);
     }
 
     /**
