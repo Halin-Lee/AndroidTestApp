@@ -2,6 +2,7 @@
 // http://www.infoq.com/cn/articles/android-in-depth-gradle
 buildscript {
     repositories {
+        mavenCentral()
         jcenter()
     }
     dependencies {
@@ -16,7 +17,13 @@ buildscript {
 
 allprojects {
     repositories {
+        mavenCentral()
         jcenter()
+
+        // google maven 库，不使用会导致无法使用最新的google support library
+        maven {
+            url "https://maven.google.com"
+        }
     }
 }
 
