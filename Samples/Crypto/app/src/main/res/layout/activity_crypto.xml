@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="yqtrack.app.openssl.OpenSSLSampleActivity">
+
+    <data>
+
+        <variable
+            name="srcStr"
+            type="String" />
+
+        <variable
+            name="keyStr"
+            type="String" />
+
+        <variable
+            name="vectorStr"
+            type="String" />
+
+        <variable
+            name="result"
+            type="String" />
+
+        <variable
+            name="context"
+            type="me.halin.crypto.CryptoActivity" />
+
+    </data>
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="加密文本：" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={srcStr}" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="密钥文本（MD5不可用）：" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={keyStr}" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="向量（仅AES可用）：" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@={vectorStr}" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="加密类型：" />
+
+            <RadioGroup
+                android:id="@+id/encrypt_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/md5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MD5" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/base64"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BASE64" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/aes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="AES" />
+
+                <android.support.v7.widget.AppCompatRadioButton
+                    android:id="@+id/rsa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="RSA" />
+            </RadioGroup>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{context::encrypt}"
+                    android:text="加密" />
+
+                <android.support.v7.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{context::decrypt}"
+                    android:text="解密" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="加密结果：" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{result}" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</layout>
